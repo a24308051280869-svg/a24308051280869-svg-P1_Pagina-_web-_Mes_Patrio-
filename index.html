@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crónicas de Septiembre: Memoria e Identidad Nacional</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 12mm 12mm;
+            background-color: #fcfbf9;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+            color: #2b2b2b;
+            font-size: 9.5pt;
+            line-height: 1.5;
+        }
+
+        /* Listón Patrio Tricolor (Verde, Blanco, Rojo) */
+        .top-accent-bar {
+            height: 8px;
+            width: 100%;
+            background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%);
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        /* Encabezado Principal */
+        .header-container {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid #006847;
+            border-right: 5px solid #ce1126;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .brand-title {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #006847;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-title span {
+            color: #ce1126;
+        }
+
+        .brand-subtitle {
+            font-size: 8pt;
+            color: #ce1126;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-top: 2px;
+        }
+
+        .header-nav {
+            text-align: right;
+            font-size: 8pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .header-nav span {
+            margin-left: 8px;
+            padding: 4px 10px;
+            border-radius: 3px;
+            color: #ffffff;
+        }
+
+        .nav-verde { background-color: #006847; }
+        .nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; }
+        .nav-rojo { background-color: #ce1126; }
+
+        /* Hero / Presentación Editorial */
+        .hero-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-left: 6px solid #006847;
+            border-right: 6px solid #ce1126;
+            padding: 22px 24px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .hero-card h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 19pt;
+            color: #006847;
+            margin: 0 0 8px 0;
+            line-height: 1.2;
+        }
+
+        .hero-card p {
+            font-size: 9.5pt;
+            color: #4a504d;
+            margin: 0 0 14px 0;
+            line-height: 1.5;
+        }
+
+        .pill-badge-rojo {
+            display: inline-block;
+            background-color: #ce1126;
+            color: #ffffff;
+            padding: 5px 14px;
+            border-radius: 15px;
+            font-size: 8pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .pill-badge-verde {
+            display: inline-block;
+            background-color: #006847;
+            color: #ffffff;
+            padding: 5px 14px;
+            border-radius: 15px;
+            font-size: 8pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-left: 6px;
+        }
+
+        /* Estilos de Secciones */
+        .section-block {
+            margin-bottom: 22px;
+        }
+
+        .section-header {
+            border-bottom: 2px solid #006847;
+            padding-bottom: 4px;
+            margin-bottom: 14px;
+            page-break-after: avoid;
+        }
+
+        .section-header h2 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 14pt;
+            color: #006847;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .section-header .tagline {
+            font-size: 8.5pt;
+            color: #ce1126;
+            font-weight: bold;
+            text-transform: uppercase;
+            float: right;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Cronología / Efemérides */
+        .cronologia-item {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid #006847;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+
+        .cronologia-header-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 4px;
+        }
+
+        .cronologia-fecha {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #ce1126;
+        }
+
+        .cronologia-titulo {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #006847;
+        }
+
+        .cronologia-item p {
+            margin: 0;
+            font-size: 8.5pt;
+            color: #4f5552;
+            line-height: 1.4;
+        }
+
+        /* Grid de Personajes */
+        .personajes-table {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-spacing: 8px;
+            margin-left: -4px;
+            margin-right: -4px;
+            page-break-inside: avoid;
+        }
+
+        .personajes-row {
+            display: table-row;
+        }
+
+        .personajes-cell {
+            display: table-cell;
+            vertical-align: top;
+            width: 25%;
+        }
+
+        .personaje-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-top: 4px solid #006847;
+            border-bottom: 4px solid #ce1126;
+            padding: 12px 10px;
+            text-align: center;
+            border-radius: 4px;
+            height: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .avatar-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: #006847;
+            color: #ffffff;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 11pt;
+            font-weight: bold;
+            line-height: 38px;
+            margin: 0 auto 8px auto;
+            border: 2px solid #ce1126;
+        }
+
+        .personaje-card h3 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 9pt;
+            color: #006847;
+            margin: 0 0 2px 0;
+            font-weight: bold;
+        }
+
+        .personaje-card .epiteto {
+            color: #ce1126;
+            font-size: 7.5pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .personaje-card p {
+            font-size: 7.5pt;
+            color: #555c58;
+            margin: 0;
+            line-height: 1.35;
+        }
+
+        /* Bloques de Mitos y Realidades */
+        .mito-realidad-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid #ce1126;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 10px 14px;
+            page-break-inside: avoid;
+        }
+
+        .badge-tipo {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 7pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge-desmentido {
+            background-color: #ce1126;
+            color: #ffffff;
+        }
+
+        .badge-historico {
+            background-color: #006847;
+            color: #ffffff;
+        }
+
+        .card-heading {
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #006847;
+            margin-bottom: 4px;
+        }
+
+        .card-body-text {
+            font-size: 8.5pt;
+            color: #4f5552;
+            line-height: 1.4;
+            border-top: 1px dotted #d0d0d0;
+            padding-top: 4px;
+            margin-top: 4px;
+        }
+
+        /* Pie de página */
+        .footer-editorial {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-top: 3px solid #006847;
+            padding: 12px 10px;
+            text-align: center;
+            margin-top: 20px;
+            page-break-inside: avoid;
+        }
+
+        .footer-editorial p {
+            margin: 0 0 8px 0;
+            font-size: 8pt;
+            color: #666666;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LÍNEA TRICOLOR SUPERIOR -->
+    <div class="top-accent-bar"></div>
+
+    <!-- ENCABEZADO EDITORIAL -->
+    <div class="header-container">
+        <table class="header-table">
+            <tr>
+                <td>
+                    <div class="brand-title">Crónicas de <span>Septiembre</span></div>
+                    <div class="brand-subtitle">Boletín Histórico e Identidad Nacional</div>
+                </td>
+                <td class="header-nav">
+                    <span class="nav-verde">Efemérides</span>
+                    <span class="nav-blanco">Biografías</span>
+                    <span class="nav-rojo">Análisis</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- HERO PRESENTACIÓN -->
+    <div class="hero-card">
+        <h1>Memoria Histórica del Mes Patrio</h1>
+        <p>Un recorrido analítico por los acontecimientos, transformaciones sociales y figuras clave que moldearon la soberanía mexicana durante las jornadas de septiembre.</p>
+        <span class="pill-badge-rojo">Compendio Histórico</span>
+        <span class="pill-badge-verde">Edición Especial</span>
+    </div>
+
+    <!-- SECCIÓN 1: CRONOLOGÍA -->
+    <div class="section-block">
+        <div class="section-header">
+            <h2>Hitos Fundamentales de la Gesta</h2>
+            <span class="tagline">Línea del Tiempo</span>
+        </div>
+
+        <div class="cronologia-list">
+            <div class="cronologia-item">
+                <table class="cronologia-header-table">
+                    <tr>
+                        <td class="cronologia-titulo">Defensa del Alcázar de Chapultepec</td>
+                        <td style="text-align: right;" class="cronologia-fecha">13 de Septiembre (1847)</td>
+                    </tr>
+                </table>
+                <p>Resistencia militar y simbólica de los estudiantes del Colegio Militar frente al avance de las tropas estadounidenses en el cerro del Saltamontes.</p>
+            </div>
+
+            <div class="cronologia-item">
+                <table class="cronologia-header-table">
+                    <tr>
+                        <td class="cronologia-titulo">La Velada de la Proclamación</td>
+                        <td style="text-align: right;" class="cronologia-fecha">15 de Septiembre</td>
+                    </tr>
+                </table>
+                <p>Conmemoración nocturna comunitaria donde la ciudadanía se congrega en los espacios públicos para reafirmar el compromiso con la soberanía nacional.</p>
+            </div>
+
+            <div class="cronologia-item">
+                <table class="cronologia-header-table">
+                    <tr>
+                        <td class="cronologia-titulo">El Clamor de Dolores</td>
+                        <td style="text-align: right;" class="cronologia-fecha">16 de Septiembre (1810)</td>
+                    </tr>
+                </table>
+                <p>Inicio formal de la insurrección armada tras la alocución dominical impartida por Don Miguel Hidalgo en la parroquia de Guanajuato.</p>
+            </div>
+
+            <div class="cronologia-item">
+                <table class="cronologia-header-table">
+                    <tr>
+                        <td class="cronologia-titulo">Entrada del Ejército de las Tres Garantías</td>
+                        <td style="text-align: right;" class="cronologia-fecha">27 de Septiembre (1821)</td>
+                    </tr>
+                </table>
+                <p>Culminación del proceso emancipador mediante la entrada triunfal del contingente insurgente-realista unificado a la capital del país.</p>
+            </div>
+
+            <div class="cronologia-item">
+                <table class="cronologia-header-table">
+                    <tr>
+                        <td class="cronologia-titulo">Homenaje a Don José María Morelos</td>
+                        <td style="text-align: right;" class="cronologia-fecha">30 de Septiembre (1765)</td>
+                    </tr>
+                </table>
+                <p>Conmemoración del nacimiento del ideólogo del movimiento, responsable del primer ideario institucional escrito de la nación.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 2: BIOGRAFÍAS (CAMBIO SOLICITADO: PERSONAJES ILUSTRES) -->
+    <div class="section-block">
+        <div class="section-header">
+            <h2>Forjadores de la Libertad</h2>
+            <span class="tagline">PERSONAJES ILUSTRES</span>
+        </div>
+
+        <div class="personajes-table">
+            <div class="personajes-row">
+                <div class="personajes-cell">
+                    <div class="personaje-card">
+                        <div class="avatar-box">DH</div>
+                        <h3>Don Miguel Hidalgo</h3>
+                        <div class="epiteto">El Iniciador</div>
+                        <p>Clérigo humanista que articuló el primer levantamiento popular y promulgó la abolición de la esclavitud en el territorio insurgente.</p>
+                    </div>
+                </div>
+
+                <div class="personajes-cell">
+                    <div class="personaje-card">
+                        <div class="avatar-box">JO</div>
+                        <h3>Doña Josefa Ortiz</h3>
+                        <div class="epiteto">La Estratega</div>
+                        <p>Pieza central en la red conspirativa de Querétaro; su oportuna advertencia impidió la desarticulación prematura del movimiento.</p>
+                    </div>
+                </div>
+
+                <div class="personajes-cell">
+                    <div class="personaje-card">
+                        <div class="avatar-box">JM</div>
+                        <h3>José María Morelos</h3>
+                        <div class="epiteto">El Organizador</div>
+                        <p>Brillante estratega político y militar que sentó las bases legislativas del Estado en los <em>Sentimientos de la Nación</em>.</p>
+                    </div>
+                </div>
+
+                <div class="personajes-cell">
+                    <div class="personaje-card">
+                        <div class="avatar-box">VG</div>
+                        <h3>Vicente Guerrero</h3>
+                        <div class="epiteto">El Baluarte</div>
+                        <p>Caudillo inquebrantable de la sierra sur que preservó la resistencia insurgente hasta consolidar el pacto de pacificación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 3: ANÁLISIS CRÍTICO / MITOS Y REALIDADES -->
+    <div class="section-block">
+        <div class="section-header">
+            <h2>Realidades, Mitos y Tradiciones</h2>
+            <span class="tagline">Análisis Histórico</span>
+        </div>
+
+        <div class="mito-realidad-card">
+            <div class="card-heading">
+                <span class="badge-tipo badge-desmentido">Mito Desmontado</span> ¿Ejecutó Hidalgo el repique directo de la campana?
+            </div>
+            <div class="card-body-text">
+                <strong>Evidencia Histórica:</strong> La convocatoria sonora de aquella madrugada fue realizada por el campanero oficial del templo, José Galván, mientras Hidalgo coordinaba al contingente en el atrio parroquial.
+            </div>
+        </div>
+
+        <div class="mito-realidad-card">
+            <div class="card-heading">
+                <span class="badge-tipo badge-historico">Origen Cultural</span> El horario de la conmemoración popular
+            </div>
+            <div class="card-body-text">
+                La costumbre de festejar la noche del 15 de septiembre responde a una tradición social instaurada desde la década de 1840 para facilitar el esparcimiento familiar, desmintiendo la creencia de que fue fijada arbitrariamente por el presidente Porfirio Díaz.
+            </div>
+        </div>
+
+        <div class="mito-realidad-card">
+            <div class="card-heading">
+                <span class="badge-tipo badge-desmentido">Mito Desmontado</span> La iconografía oficial del Cura Hidalgo
+            </div>
+            <div class="card-body-text">
+                <strong>Evidencia Histórica:</strong> No existen retratos pictóricos creados en vida de Don Miguel Hidalgo. El retrato institucional más extendido fue comisionado por el emperador Maximiliano décadas más tarde, tomando como referencia a un clérigo belga.
+            </div>
+        </div>
+
+        <div class="mito-realidad-card">
+            <div class="card-heading">
+                <span class="badge-tipo badge-historico">Patrimonio Gastronómico</span> La simbología de los Chiles en Nogada
+            </div>
+            <div class="card-body-text">
+                Especialidad culinaria concebida por las religiosas del convento de Santa Mónica en Puebla para agasajar a Agustín de Iturbide, incorporando los tonos patrios de la bandera del Ejército Trigarante.
+            </div>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA TRICOLOR -->
+    <div class="footer-editorial">
+        <p>&copy; Publicación Histórica Informativa — Rediseño Editorial e Identidad Visual Reformulada.</p>
+        <div class="top-accent-bar"></div>
+    </div>
+
+</body>
+</html>
