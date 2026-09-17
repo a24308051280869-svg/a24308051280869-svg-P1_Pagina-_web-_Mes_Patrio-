@@ -1,233 +1,235 @@
 <!DOCTYPE html> <!-- Declara que este documento es un archivo HTML5 estándar -->
-<html lang="es"> <!-- Define el idioma de la página como español -->
-<head>
-    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres para acentos y eñes -->
+<html lang="es"> <!-- Define el idioma principal de la página como español -->
+<head> <!-- Contiene los metadatos, títulos y estilos del documento -->
+    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres para mostrar acentos y eñes correctamente -->
     <title>Biografías - Crónicas de Septiembre</title> <!-- Título visible en la pestaña del navegador -->
-    <style>
+    
+    <style> /* Abre el bloque de hojas de estilo CSS internas */
         /* CONFIGURACIÓN DE HOJA Y MÁRGENES PARA IMPRESIÓN */
-        @page { 
+        @page { /* Configuración para formato de impresión */
             size: A4; /* Formato para impresión en hoja A4 */
-            margin: 12mm 12mm; /* Márgenes del documento */
+            margin: 12mm 12mm; /* Márgenes del documento impreso */
             background-color: #fcfbf9; /* Fondo tono hueso suave */
-        }
+        } /* Cierra la regla @page */
 
         /* REGLAS GLOBALES Y RESET DE BORDES */
-        *, *::before, *::after { 
+        *, *::before, *::after { /* Seleccionador universal para aplicar el modelo de caja */
             box-sizing: border-box; /* Evita que bordes y rellenos alteren el tamaño del elemento */
-        }
+        } /* Cierra la regla del box-sizing */
 
-        body { 
-            margin: 0; 
-            padding: 0; 
+        body { /* Estilos generales para el cuerpo del documento */
+            margin: 0; /* Elimina el margen por defecto */
+            padding: 0; /* Elimina el relleno interno por defecto */
             font-family: 'Trebuchet MS', Arial, sans-serif; /* Tipografía principal */
             color: #2b2b2b; /* Color de texto gris oscuro */
-            font-size: 9.5pt; 
-            line-height: 1.5; 
-        }
+            font-size: 9.5pt; /* Tamaño base del texto */
+            line-height: 1.5; /* Altura de línea para legibilidad */
+        } /* Cierra los estilos del body */
 
         /* BARRA DE ACENTO SUPERIOR (COLORES PATRIOS) */
-        .top-accent-bar { 
-            height: 8px; 
-            width: 100%; 
+        .top-accent-bar { /* Clase para la franja decorativa superior */
+            height: 8px; /* Altura de la barra */
+            width: 100%; /* Ocupa todo el ancho disponible */
             /* Gradiente lineal con los colores verde, blanco y rojo */
             background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%); 
-            border-bottom: 1px solid #d0d0d0; 
-        }
+            border-bottom: 1px solid #d0d0d0; /* Borde inferior tenue */
+        } /* Cierra la barra de acento */
 
         /* ESTILOS DEL ENCABEZADO PRINCIPAL */
-        .header-container { 
-            background-color: #ffffff; 
-            border: 1px solid #e0e0e0; 
+        .header-container { /* Contenedor del encabezado */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Borde gris muy suave */
             border-left: 5px solid #006847; /* Marco lateral verde */
             border-right: 5px solid #ce1126; /* Marco lateral rojo */
-            padding: 16px 20px; 
-            margin-bottom: 16px; 
-            border-radius: 4px; 
-        }
+            padding: 16px 20px; /* Relleno interno */
+            margin-bottom: 16px; /* Separación inferior */
+            border-radius: 4px; /* Esquinas ligeramente redondeadas */
+        } /* Cierra la clase header-container */
 
-        .header-table { 
-            width: 100%; 
-            border-collapse: collapse; 
-        }
+        .header-table { /* Tabla para estructurar el contenido del encabezado */
+            width: 100%; /* Ocupa el 100% del contenedor */
+            border-collapse: collapse; /* Elimina espacio entre celdas */
+        } /* Cierra los estilos de la tabla de encabezado */
 
-        .brand-title { 
-            font-family: 'Georgia', serif; 
-            font-size: 16pt; 
-            font-weight: bold; 
-            color: #006847; 
-            letter-spacing: 0.5px; 
-        }
+        .brand-title { /* Estilo para el título del sitio */
+            font-family: 'Georgia', serif; /* Fuente estilo periódico */
+            font-size: 16pt; /* Tamaño destacado */
+            font-weight: bold; /* Texto en negrita */
+            color: #006847; /* Color verde principal */
+            letter-spacing: 0.5px; /* Espaciado entre letras */
+        } /* Cierra la clase brand-title */
 
-        .brand-title a { 
-            text-decoration: none; 
-            color: inherit; 
-        }
+        .brand-title a { /* Estilo del enlace dentro del título */
+            text-decoration: none; /* Quita el subrayado del enlace */
+            color: inherit; /* Mantiene el color del contenedor padre */
+        } /* Cierra estilos del enlace de título */
 
-        .brand-title span { 
+        .brand-title span { /* Resaltado de la palabra en el título */
             color: #ce1126; /* Palabra "Septiembre" en rojo */
-        }
+        } /* Cierra el span del título */
 
-        .brand-subtitle { 
-            font-size: 8pt; 
-            color: #ce1126; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 1.2px; 
-            margin-top: 2px; 
-        }
+        .brand-subtitle { /* Estilo del subtítulo */
+            font-size: 8pt; /* Tamaño de letra pequeño */
+            color: #ce1126; /* Texto de color rojo */
+            font-weight: bold; /* Texto en negrita */
+            text-transform: uppercase; /* Convierte el texto a mayúsculas */
+            letter-spacing: 1.2px; /* Espaciado entre caracteres */
+            margin-top: 2px; /* Margen superior */
+        } /* Cierra la clase brand-subtitle */
 
         /* ESTILOS DE NAVEGACIÓN */
-        .header-nav { 
-            text-align: right; 
-            font-size: 8pt; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 0.8px; 
-        }
+        .header-nav { /* Contenedor de la navegación en la celda derecha */
+            text-align: right; /* Alineación del texto a la derecha */
+            font-size: 8pt; /* Tamaño de fuente */
+            font-weight: bold; /* Texto en negrita */
+            text-transform: uppercase; /* Texto en mayúsculas */
+            letter-spacing: 0.8px; /* Espaciado entre caracteres */
+        } /* Cierra la clase header-nav */
 
-        .header-nav a { 
-            margin-left: 6px; 
-            padding: 6px 12px; 
-            border-radius: 4px; 
-            text-decoration: none; 
-            display: inline-block; 
-            cursor: pointer; 
-            transition: opacity 0.2s; 
-        }
+        .header-nav a { /* Estilos generales de los botones del menú */
+            margin-left: 6px; /* Separación a la izquierda */
+            padding: 6px 12px; /* Relleno interno vertical y horizontal */
+            border-radius: 4px; /* Bordes redondeados */
+            text-decoration: none; /* Remueve el subrayado */
+            display: inline-block; /* Comportamiento de bloque alineado */
+            cursor: pointer; /* Icono de cursor tipo puntero */
+            transition: opacity 0.2s; /* Transición suave para el efecto hover */
+        } /* Cierra estilos de enlaces de navegación */
 
-        .header-nav a:hover { 
-            opacity: 0.85; 
-        }
+        .header-nav a:hover { /* Efecto al pasar el cursor */
+            opacity: 0.85; /* Reduce la opacidad sutilmente */
+        } /* Cierra estado hover */
 
-        .nav-inicio { background-color: #2b2b2b; color: #ffffff !important; }
-        .nav-verde { background-color: #006847; color: #ffffff !important; }
-        .nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; }
-        .nav-rojo { background-color: #ce1126; color: #ffffff !important; }
+        /* Clases para personalizar los botones de navegación */
+        .nav-inicio { background-color: #2b2b2b; color: #ffffff !important; } /* Botón Inicio oscuro */
+        .nav-verde { background-color: #006847; color: #ffffff !important; } /* Botón Efemérides verde */
+        .nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; } /* Botón activo Biografías */
+        .nav-rojo { background-color: #ce1126; color: #ffffff !important; } /* Botón Análisis rojo */
 
         /* SECCIÓN Y ENCABEZADOS DE CONTENIDO */
-        .section-block { 
-            margin-bottom: 22px; 
-        }
+        .section-block { /* Bloque contenedor principal */
+            margin-bottom: 22px; /* Espaciado inferior */
+        } /* Cierra el bloque de sección */
 
-        .section-header { 
-            border-bottom: 2px solid #006847; 
-            padding-bottom: 4px; 
-            margin-bottom: 14px; 
-        }
+        .section-header { /* Cabecera de la sección de contenidos */
+            border-bottom: 2px solid #006847; /* Línea verde inferior */
+            padding-bottom: 4px; /* Espaciado sobre la línea */
+            margin-bottom: 14px; /* Separación con el contenido */
+        } /* Cierra el encabezado de sección */
 
-        .section-header h2 { 
-            font-family: 'Georgia', serif; 
-            font-size: 14pt; 
-            color: #006847; 
-            margin: 0; 
-            display: inline-block; 
-        }
+        .section-header h2 { /* Título principal de la sección */
+            font-family: 'Georgia', serif; /* Fuente con serif clásica */
+            font-size: 14pt; /* Tamaño de fuente */
+            color: #006847; /* Texto de color verde */
+            margin: 0; /* Remueve margen */
+            display: inline-block; /* Permite elementos a su lado */
+        } /* Cierra el h2 de la sección */
 
-        .section-header .tagline { 
-            font-size: 8.5pt; 
-            color: #ce1126; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            float: right; 
-            margin-top: 4px; 
-            letter-spacing: 0.5px; 
-        }
+        .section-header .tagline { /* Texto secundario en el encabezado */
+            font-size: 8.5pt; /* Tamaño pequeño */
+            color: #ce1126; /* Texto rojo */
+            font-weight: bold; /* Texto en negrita */
+            text-transform: uppercase; /* Mayúsculas */
+            float: right; /* Flota hacia la derecha de la sección */
+            margin-top: 4px; /* Ajuste vertical superior */
+            letter-spacing: 0.5px; /* Espaciado entre letras */
+        } /* Cierra la etiqueta tagline */
 
         /* DISPOSICIÓN EN COLUMNAS */
-        .personajes-table { 
-            display: table; 
-            width: 100%; 
-            table-layout: fixed; 
-            border-spacing: 8px; 
-            margin-left: -4px; 
-            margin-right: -4px; 
-        }
+        .personajes-table { /* Simula el comportamiento de una tabla HTML para la maquetación */
+            display: table; /* Define el elemento como tabla CSS */
+            width: 100%; /* Ocupa el ancho total */
+            table-layout: fixed; /* Mantiene celdas de tamaño uniforme */
+            border-spacing: 8px; /* Espaciado entre las tarjetas/celdas */
+            margin-left: -4px; /* Ajuste fino de margen izquierdo */
+            margin-right: -4px; /* Ajuste fino de margen derecho */
+        } /* Cierra personajes-table */
 
-        .personajes-row { 
-            display: table-row; 
-        }
+        .personajes-row { /* Simula una fila de tabla */
+            display: table-row; /* Define el elemento como fila CSS */
+        } /* Cierra personajes-row */
 
-        .personajes-cell { 
-            display: table-cell; 
-            vertical-align: top; 
-            width: 25%; 
-        }
+        .personajes-cell { /* Simula una celda dentro de la fila */
+            display: table-cell; /* Define el elemento como celda CSS */
+            vertical-align: top; /* Alinea el contenido en la parte superior */
+            width: 25%; /* Cada una de las 4 celdas ocupa un 25% del ancho */
+        } /* Cierra personajes-cell */
 
         /* TARJETAS INDIVIDUALES DE PERSONAJES */
-        .personaje-card { 
-            background-color: #ffffff; 
-            border: 1px solid #e0e0e0; 
-            border-top: 4px solid #006847; 
-            border-bottom: 4px solid #ce1126; 
-            padding: 12px 10px; 
-            text-align: center; 
-            border-radius: 4px; 
-            height: 100%; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02); 
-        }
+        .personaje-card { /* Estilo contenedor de cada tarjeta */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Borde gris claro */
+            border-top: 4px solid #006847; /* Línea verde superior */
+            border-bottom: 4px solid #ce1126; /* Línea roja inferior */
+            padding: 12px 10px; /* Relleno interno */
+            text-align: center; /* Centra todo el contenido de la tarjeta */
+            border-radius: 4px; /* Bordes ligeramente redondeados */
+            height: 100%; /* Toma la altura completa disponible */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* Sombra muy sutil */
+        } /* Cierra personaje-card */
 
         /* CONTENEDOR CÍRCULO PARA LA FOTO DEL PERSONAJE */
-        .avatar-box { 
-            width: 48px; 
-            height: 48px; 
+        .avatar-box { /* Cúpula redonda para contener la imagen */
+            width: 48px; /* Ancho fijo */
+            height: 48px; /* Alto fijo idéntico para ser cuadrado */
             border-radius: 50%; /* Transforma el recuadro en un círculo perfecto */
             overflow: hidden; /* Corta los bordes sobrantes de la imagen */
             margin: 0 auto 8px auto; /* Centra el círculo horizontalmente */
             border: 2px solid #ce1126; /* Anillo rojo alrededor de la foto */
-            background-color: #f0f0f0; 
-        }
+            background-color: #f0f0f0; /* Fondo gris por defecto */
+        } /* Cierra avatar-box */
 
         /* AJUSTE DE LA IMAGEN DENTRO DEL CÍRCULO */
-        .avatar-box img { 
-            width: 100%; 
-            height: 100%; 
+        .avatar-box img { /* Configuración para la etiqueta de imagen interna */
+            width: 100%; /* Ajusta al ancho del contenedor */
+            height: 100%; /* Ajusta al alto del contenedor */
             object-fit: cover; /* Recorta la imagen automáticamente para llenar el círculo sin deformarla */
-            display: block; 
-        }
+            display: block; /* Elimina espacio blanco inferior por defecto */
+        } /* Cierra estilos de la imagen avatar */
 
-        .personaje-card h3 { 
-            font-family: 'Georgia', serif; 
-            font-size: 9pt; 
-            color: #006847; 
-            margin: 0 0 2px 0; 
-            font-weight: bold; 
-        }
+        .personaje-card h3 { /* Estilo para el nombre del personaje */
+            font-family: 'Georgia', serif; /* Fuente con serif */
+            font-size: 9pt; /* Tamaño de fuente */
+            color: #006847; /* Texto de color verde */
+            margin: 0 0 2px 0; /* Margen inferior */
+            font-weight: bold; /* Texto en negrita */
+        } /* Cierra h3 del personaje */
 
-        .personaje-card .epiteto { 
-            color: #ce1126; 
-            font-size: 7.5pt; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            margin-bottom: 6px; 
-            letter-spacing: 0.3px; 
-        }
+        .personaje-card .epiteto { /* Estilo del subtítulo/epíteto del personaje */
+            color: #ce1126; /* Texto rojo */
+            font-size: 7.5pt; /* Tamaño de fuente reducido */
+            font-weight: bold; /* Texto en negrita */
+            text-transform: uppercase; /* Mayúsculas */
+            margin-bottom: 6px; /* Separación inferior */
+            letter-spacing: 0.3px; /* Espaciado entre letras */
+        } /* Cierra la clase epiteto */
 
-        .personaje-card p { 
-            font-size: 7.5pt; 
-            color: #555c58; 
-            margin: 0; 
-            line-height: 1.35; 
-        }
+        .personaje-card p { /* Párrafo descriptivo del personaje */
+            font-size: 7.5pt; /* Tamaño de fuente */
+            color: #555c58; /* Texto gris verdoso */
+            margin: 0; /* Remueve márgenes */
+            line-height: 1.35; /* Interlineado */
+        } /* Cierra el párrafo del personaje */
 
         /* PIE DE PÁGINA EDITORIAL */
-        .footer-editorial { 
-            background-color: #ffffff; 
-            border: 1px solid #e0e0e0; 
-            border-top: 3px solid #006847; 
-            padding: 12px 10px; 
-            text-align: center; 
-            margin-top: 20px; 
-        }
+        .footer-editorial { /* Estilos del contenedor del pie de página */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Borde suave */
+            border-top: 3px solid #006847; /* Línea verde superior */
+            padding: 12px 10px; /* Relleno interno */
+            text-align: center; /* Alinea el texto al centro */
+            margin-top: 20px; /* Margen superior */
+        } /* Cierra la clase footer-editorial */
 
-        .footer-editorial p { 
-            margin: 0 0 8px 0; 
-            font-size: 8pt; 
-            color: #666666; 
-            font-weight: bold; 
-        }
-    </style>
-</head>
-<body>
+        .footer-editorial p { /* Estilo del texto en el pie de página */
+            margin: 0 0 8px 0; /* Margen inferior */
+            font-size: 8pt; /* Tamaño de texto */
+            color: #666666; /* Color gris */
+            font-weight: bold; /* Texto en negrita */
+        } /* Cierra el párrafo del pie */
+    </style> <!-- Cierra la sección de estilos CSS -->
+</head> <!-- Cierra el encabezado del documento HTML -->
+<body> <!-- Abre el cuerpo del documento donde se ubica el contenido visible -->
     <!-- Barra decorativa superior con el patrón tricolor -->
     <div class="top-accent-bar"></div>
 
@@ -317,6 +319,5 @@
         <p>ERIK MARTINEZ MONTES 5-J 0869</p>
         <div class="top-accent-bar"></div>
     </div>
-</body>
-</html>
-</html>
+</body> <!-- Cierra el cuerpo del documento -->
+</html> <!-- Cierra la etiqueta raíz del documento HTML -->
