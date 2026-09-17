@@ -1,264 +1,264 @@
 <!DOCTYPE html> <!-- Define que este documento utiliza el estándar moderno de HTML5 -->
 <html lang="es"> <!-- Elemento raíz que indica que el contenido está en español -->
-<head>
+<head> <!-- Contiene la información técnica y metadatos no visibles en el cuerpo de la página -->
     <meta charset="UTF-8"> <!-- Asegura que los acentos, la ñ y caracteres especiales se muestren correctamente -->
     <title>Crónicas de Septiembre: Memoria e Identidad Nacional</title> <!-- Título que aparece en la pestaña del navegador -->
     
-    <style>
+    <style> /* Abre el bloque para la declaración de estilos CSS internos */
         /* CONFIGURACIÓN DE PÁGINA E IMPRESIÓN */
-        @page { 
+        @page { /* Define las propiedades de impresión y vista en formato PDF */
             size: A4; /* Define el tamaño de la hoja para cuando se vaya a imprimir o guardar como PDF */
             margin: 12mm 12mm; /* Márgenes de la página impresa */
             background-color: #fcfbf9; /* Color de fondo ligeramente crema/cálido */
-        }
+        } /* Cierra la configuración de la página de impresión */
 
         /* REGLAS GLOBALES Y RESET DE ESTILOS */
-        *, *::before, *::after { 
+        *, *::before, *::after { /* Selecciona todos los elementos y pseudo-elementos del documento */
             box-sizing: border-box; /* Incluye bordes y padding dentro del ancho/alto total del elemento */
-        }
+        } /* Cierra la regla global del modelo de caja */
         
-        body { 
-            margin: 0; 
-            padding: 0; 
+        body { /* Establece los estilos del cuerpo principal de la página */
+            margin: 0; /* Elimina el margen exterior por defecto del navegador */
+            padding: 0; /* Elimina el relleno interior por defecto del navegador */
             font-family: 'Trebuchet MS', Arial, sans-serif; /* Tipografía principal limpia para el cuerpo */
             color: #2b2b2b; /* Color de texto gris oscuro (más suave que negro puro) */
             font-size: 9.5pt; /* Tamaño base de la tipografía */
             line-height: 1.5; /* Espaciado cómodo entre líneas de texto */
-        }
+        } /* Cierra los estilos del cuerpo */
 
         /* ELEMENTOS DE DISEÑO Y CABECERA */
-        .top-accent-bar { 
-            height: 8px; 
-            width: 100%; 
+        .top-accent-bar { /* Define el estilo de la franja tricolor superior */
+            height: 8px; /* Fija la altura de la barra en 8 píxeles */
+            width: 100%; /* Define que la barra ocupe el ancho completo */
             /* Crea una barra tricolor continua (verde, blanco y rojo) usando gradientes */
             background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%); 
-            border-bottom: 1px solid #d0d0d0; 
-        }
+            border-bottom: 1px solid #d0d0d0; /* Añade una línea inferior de separación en tono gris */
+        } /* Cierra los estilos de la barra tricolor */
 
-        .header-container { 
-            background-color: #ffffff; 
-            border: 1px solid #e0e0e0; 
+        .header-container { /* Define el contenedor principal de la cabecera */
+            background-color: #ffffff; /* Fija el fondo en color blanco */
+            border: 1px solid #e0e0e0; /* Aplica un borde fino alrededor */
             border-left: 5px solid #006847; /* Borde lateral verde */
             border-right: 5px solid #ce1126; /* Borde lateral rojo */
-            padding: 16px 20px; 
-            margin-bottom: 16px; 
-            border-radius: 4px; 
-        }
+            padding: 16px 20px; /* Relleno de 16px vertical y 20px horizontal */
+            margin-bottom: 16px; /* Espaciado con el siguiente bloque */
+            border-radius: 4px; /* Redondea levemente las esquinas */
+        } /* Cierra el contenedor del encabezado */
 
-        .header-table { 
-            width: 100%; 
+        .header-table { /* Estiliza la tabla que organiza el logotipo y la navegación */
+            width: 100%; /* Ocupa la totalidad del ancho del contenedor */
             border-collapse: collapse; /* Elimina espacios vacíos entre celdas de la tabla */
-        }
+        } /* Cierra los estilos de la tabla de encabezado */
 
-        .brand-title { 
+        .brand-title { /* Define el estilo del título del sitio web */
             font-family: 'Georgia', serif; /* Tipografía elegante estilo periódico para el logotipo */
-            font-size: 16pt; 
-            font-weight: bold; 
-            color: #006847; 
-            letter-spacing: 0.5px; 
-        }
+            font-size: 16pt; /* Tamaño de fuente del título */
+            font-weight: bold; /* Texto en formato negrita */
+            color: #006847; /* Asigna el color verde patrio al texto */
+            letter-spacing: 0.5px; /* Espaciado entre letras */
+        } /* Cierra los estilos del título del portal */
 
-        .brand-title a { 
+        .brand-title a { /* Define el estilo del enlace en el título */
             text-decoration: none; /* Le quita la línea subrayada a los enlaces */
-            color: inherit; 
-        }
+            color: inherit; /* Hereda el color del contenedor padre */
+        } /* Cierra los estilos del enlace del título */
 
-        .brand-title span { 
+        .brand-title span { /* Estiliza la palabra resaltada dentro del título */
             color: #ce1126; /* Resalta la palabra "Septiembre" en rojo */
-        }
+        } /* Cierra la regla para el span en el título */
 
-        .brand-subtitle { 
-            font-size: 8pt; 
-            color: #ce1126; 
-            font-weight: bold; 
+        .brand-subtitle { /* Estiliza el subtítulo del encabezado */
+            font-size: 8pt; /* Tamaño de la tipografía */
+            color: #ce1126; /* Color rojo patrio */
+            font-weight: bold; /* Aplica negrita */
             text-transform: uppercase; /* Convierte el texto automáticamente a mayúsculas */
-            letter-spacing: 1.2px; 
-            margin-top: 2px; 
-        }
+            letter-spacing: 1.2px; /* Separa los caracteres ligeramente */
+            margin-top: 2px; /* Distancia respecto al título principal */
+        } /* Cierra el estilo del subtítulo */
 
         /* NAVEGACIÓN (BOTONES Y BOTONES ACTIVOS) */
-        .header-nav { 
-            text-align: right; 
-            font-size: 8pt; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 0.8px; 
-        }
+        .header-nav { /* Define el área derecha de la cabecera para la navegación */
+            text-align: right; /* Alinea los elementos a la derecha */
+            font-size: 8pt; /* Tamaño de la letra */
+            font-weight: bold; /* Texto en negrita */
+            text-transform: uppercase; /* Pone las opciones del menú en mayúsculas */
+            letter-spacing: 0.8px; /* Espaciado entre letras */
+        } /* Cierra los estilos del contenedor de navegación */
 
-        .header-nav a { 
-            margin-left: 6px; 
-            padding: 6px 12px; 
-            border-radius: 4px; 
-            text-decoration: none; 
-            display: inline-block; 
-            cursor: pointer; 
+        .header-nav a { /* Estiliza de manera individual cada botón de la navegación */
+            margin-left: 6px; /* Separación horizontal entre botones */
+            padding: 6px 12px; /* Relleno interior vertical y horizontal */
+            border-radius: 4px; /* Esquinas ligeramente redondeadas */
+            text-decoration: none; /* Quita el subrayado al hipervínculo */
+            display: inline-block; /* Permite controlar paddings y márgenes correctamente */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
             transition: opacity 0.2s; /* Transición suave al pasar el cursor */
-        }
+        } /* Cierra los estilos de los enlaces del menú */
 
-        .header-nav a:hover { 
+        .header-nav a:hover { /* Cambia la apariencia al pasar el cursor */
             opacity: 0.85; /* Efecto visual al pasar el ratón sobre los botones */
-        }
+        } /* Cierra el efecto hover de los enlaces */
 
         /* Variaciones de color para las pestañas del menú */
-        .nav-inicio { background-color: #2b2b2b; color: #ffffff !important; }
-        .nav-verde { background-color: #006847; color: #ffffff !important; }
-        .nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; }
-        .nav-rojo { background-color: #ce1126; color: #ffffff !important; }
+        .nav-inicio { background-color: #2b2b2b; color: #ffffff !important; } /* Botón Inicio en negro */
+        .nav-verde { background-color: #006847; color: #ffffff !important; } /* Botón Efemérides en verde */
+        .nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; } /* Botón Biografías en blanco */
+        .nav-rojo { background-color: #ce1126; color: #ffffff !important; } /* Botón Análisis en rojo */
 
         /* SECCIÓN HERO (TARJETA DESTACADA) */
-        .hero-card { 
-            background-color: #ffffff; 
-            border: 1px solid #e0e0e0; 
-            border-left: 6px solid #006847; 
-            border-right: 6px solid #ce1126; 
-            padding: 22px 24px; 
-            margin-bottom: 20px; 
-            border-radius: 4px; 
+        .hero-card { /* Estiliza el bloque destacado principal */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Borde suave de separación */
+            border-left: 6px solid #006847; /* Borde izquierdo verde de realce */
+            border-right: 6px solid #ce1126; /* Borde derecho rojo de realce */
+            padding: 22px 24px; /* Relleno interior */
+            margin-bottom: 20px; /* Separación con el siguiente bloque */
+            border-radius: 4px; /* Redondeo de bordes */
             box-shadow: 0 3px 8px rgba(0,0,0,0.03); /* Sombra ligera para dar profundidad */
-        }
+        } /* Cierra la clase de la tarjeta hero */
 
-        .hero-card h1 { 
-            font-family: 'Georgia', serif; 
-            font-size: 19pt; 
-            color: #006847; 
-            margin: 0 0 8px 0; 
-            line-height: 1.2; 
-        }
+        .hero-card h1 { /* Estiliza el título de la tarjeta hero */
+            font-family: 'Georgia', serif; /* Fuente con serif elegante */
+            font-size: 19pt; /* Tamaño grande para destacar */
+            color: #006847; /* Color verde patrio */
+            margin: 0 0 8px 0; /* Margen inferior */
+            line-height: 1.2; /* Altura de línea ajustada */
+        } /* Cierra la regla del título h1 */
 
-        .hero-card p { 
-            font-size: 9.5pt; 
-            color: #4a504d; 
-            margin: 0 0 14px 0; 
-            line-height: 1.5; 
-        }
+        .hero-card p { /* Estiliza el contenido textual dentro del hero */
+            font-size: 9.5pt; /* Tamaño de letra legible */
+            color: #4a504d; /* Color gris ligeramente verdoso */
+            margin: 0 0 14px 0; /* Margen inferior */
+            line-height: 1.5; /* Interlineado */
+        } /* Cierra la regla del párrafo hero */
 
         /* ETIQUETAS DE TIPO PÍLDORA (BADGES) */
-        .pill-badge-rojo { 
-            display: inline-block; 
-            background-color: #ce1126; 
-            color: #ffffff; 
-            padding: 5px 14px; 
+        .pill-badge-rojo { /* Estiliza la etiqueta roja con bordes redondeados */
+            display: inline-block; /* Formato de bloque en línea */
+            background-color: #ce1126; /* Fondo rojo */
+            color: #ffffff; /* Texto en blanco */
+            padding: 5px 14px; /* Relleno interno */
             border-radius: 15px; /* Bordes totalmente redondeados */
-            font-size: 8pt; 
-            font-weight: bold; 
-            letter-spacing: 0.5px; 
-            text-transform: uppercase; 
-        }
+            font-size: 8pt; /* Tamaño de letra pequeño */
+            font-weight: bold; /* Negrita */
+            letter-spacing: 0.5px; /* Espacio entre letras */
+            text-transform: uppercase; /* Mayúsculas */
+        } /* Cierra la clase de la píldora roja */
 
-        .pill-badge-verde { 
-            display: inline-block; 
-            background-color: #006847; 
-            color: #ffffff; 
-            padding: 5px 14px; 
-            border-radius: 15px; 
-            font-size: 8pt; 
-            font-weight: bold; 
-            letter-spacing: 0.5px; 
-            text-transform: uppercase; 
-            margin-left: 6px; 
-        }
+        .pill-badge-verde { /* Estiliza la etiqueta verde con bordes redondeados */
+            display: inline-block; /* Formato de bloque en línea */
+            background-color: #006847; /* Fondo verde */
+            color: #ffffff; /* Texto blanco */
+            padding: 5px 14px; /* Relleno interno */
+            border-radius: 15px; /* Esquinas redondas */
+            font-size: 8pt; /* Tamaño pequeño */
+            font-weight: bold; /* Negrita */
+            letter-spacing: 0.5px; /* Espaciado entre letras */
+            text-transform: uppercase; /* Mayúsculas */
+            margin-left: 6px; /* Separación con el elemento anterior */
+        } /* Cierra la clase de la píldora verde */
 
         /* SECCIONES Y CONTENIDO */
-        .section-block { 
-            margin-bottom: 22px; 
-        }
+        .section-block { /* Estiliza los bloques de contenido general */
+            margin-bottom: 22px; /* Margen inferior */
+        } /* Cierra el estilo de sección */
 
-        .section-header { 
+        .section-header { /* Define el formato del título de sección con línea divisoria */
             border-bottom: 2px solid #006847; /* Línea divisoria verde debajo del título */
-            padding-bottom: 4px; 
-            margin-bottom: 14px; 
-        }
+            padding-bottom: 4px; /* Relleno sobre la línea */
+            margin-bottom: 14px; /* Distancia al contenido */
+        } /* Cierra los estilos de la cabecera de sección */
 
-        .section-header h2 { 
-            font-family: 'Georgia', serif; 
-            font-size: 14pt; 
-            color: #006847; 
-            margin: 0; 
-            display: inline-block; 
-        }
+        .section-header h2 { /* Estiliza los títulos h2 */
+            font-family: 'Georgia', serif; /* Tipografía serif */
+            font-size: 14pt; /* Tamaño de fuente */
+            color: #006847; /* Color verde */
+            margin: 0; /* Elimina margen exterior */
+            display: inline-block; /* Se coloca en línea con la etiqueta derecha */
+        } /* Cierra los estilos del h2 */
 
-        .section-header .tagline { 
-            font-size: 8.5pt; 
-            color: #ce1126; 
-            font-weight: bold; 
-            text-transform: uppercase; 
+        .section-header .tagline { /* Estiliza la etiqueta ubicada en la parte superior derecha de las secciones */
+            font-size: 8.5pt; /* Tamaño de fuente */
+            color: #ce1126; /* Color rojo */
+            font-weight: bold; /* Negrita */
+            text-transform: uppercase; /* Mayúsculas */
             float: right; /* Alinea la etiqueta secundaria a la derecha de la misma línea */
-            margin-top: 4px; 
-            letter-spacing: 0.5px; 
-        }
+            margin-top: 4px; /* Espaciado superior */
+            letter-spacing: 0.5px; /* Espaciado entre caracteres */
+        } /* Cierra el estilo de la etiqueta flotante */
 
         /* PIE DE PÁGINA EDITORIAL */
-        .footer-editorial { 
-            background-color: #ffffff; 
-            border: 1px solid #e0e0e0; 
-            border-top: 3px solid #006847; 
-            padding: 12px 10px; 
-            text-align: center; 
-            margin-top: 20px; 
-        }
+        .footer-editorial { /* Estiliza la tarjeta del pie de página */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Borde gris tenue */
+            border-top: 3px solid #006847; /* Borde superior de acento verde */
+            padding: 12px 10px; /* Relleno interno */
+            text-align: center; /* Alineación centrada */
+            margin-top: 20px; /* Espacio superior */
+        } /* Cierra los estilos del pie editorial */
 
-        .footer-editorial p { 
-            margin: 0 0 8px 0; 
-            font-size: 8pt; 
-            color: #666666; 
-            font-weight: bold; 
-        }
-    </style>
-</head>
-<body>
+        .footer-editorial p { /* Estiliza el texto dentro del pie editorial */
+            margin: 0 0 8px 0; /* Margen inferior */
+            font-size: 8pt; /* Fuente pequeña */
+            color: #666666; /* Texto gris */
+            font-weight: bold; /* Texto en negrita */
+        } /* Cierra el estilo del párrafo del pie */
+    </style> <!-- Cierra la etiqueta de estilos CSS -->
+</head> <!-- Cierra la cabecera del documento HTML -->
+<body> <!-- Abre el cuerpo principal visible para el usuario -->
     <!-- Barra decorativa superior con colores patrios -->
-    <div class="top-accent-bar"></div>
+    <div class="top-accent-bar"></div> <!-- Inserta la barra de color decorativa superior -->
 
     <!-- Encabezado principal del boletín -->
-    <div class="header-container">
+    <div class="header-container"> <!-- Abre el contenedor blanco del encabezado -->
         <!-- Uso de tabla HTML para alineación perfecta de logotipo y navegación -->
-        <table class="header-table">
-            <tr>
+        <table class="header-table"> <!-- Inicia la tabla de estructura del encabezado -->
+            <tr> <!-- Inicia la fila del encabezado -->
                 <!-- Columna del logotipo / Marca -->
-                <td>
-                    <div class="brand-title"><a href="index.html">Crónicas de <span>Septiembre</span></a></div>
-                    <div class="brand-subtitle">Boletín Histórico e Identidad Nacional</div>
-                </td>
+                <td> <!-- Celda que contiene la marca del boletín -->
+                    <div class="brand-title"><a href="index.html">Crónicas de <span>Septiembre</span></a></div> <!-- Título del proyecto con enlace e hipertexto en rojo -->
+                    <div class="brand-subtitle">Boletín Histórico e Identidad Nacional</div> <!-- Subtítulo en mayúsculas -->
+                </td> <!-- Cierra la celda del logotipo -->
                 <!-- Columna con el menú de enlaces -->
-                <td class="header-nav">
-                    <a href="index.html" class="nav-inicio">Inicio</a>
-                    <a href="efemerides.html" class="nav-verde">Efemérides</a>
-                    <a href="biografias.html" class="nav-blanco">Biografías</a>
-                    <a href="analisis.html" class="nav-rojo">Análisis</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+                <td class="header-nav"> <!-- Celda alineada a la derecha con la navegación -->
+                    <a href="index.html" class="nav-inicio">Inicio</a> <!-- Botón activo para Inicio -->
+                    <a href="efemerides.html" class="nav-verde">Efemérides</a> <!-- Botón verde para Efemérides -->
+                    <a href="biografias.html" class="nav-blanco">Biografías</a> <!-- Botón blanco para Biografías -->
+                    <a href="analisis.html" class="nav-rojo">Análisis</a> <!-- Botón rojo para Análisis -->
+                </td> <!-- Cierra la celda de la navegación -->
+            </tr> <!-- Cierra la fila del encabezado -->
+        </table> <!-- Cierra la tabla del encabezado -->
+    </div> <!-- Cierra el contenedor del encabezado -->
 
     <!-- Bloque central de presentación / Contenido principal destacado -->
-    <div class="hero-card">
-        <h1>Memoria Histórica del Mes Patrio</h1>
-        <p>Un recorrido analítico por los acontecimientos, transformaciones sociales y figuras clave que moldearon la soberanía mexicana durante las jornadas de septiembre.</p>
+    <div class="hero-card"> <!-- Abre la tarjeta contenedora principal hero -->
+        <h1>Memoria Histórica del Mes Patrio</h1> <!-- Título principal h1 -->
+        <p>Un recorrido analítico por los acontecimientos, transformaciones sociales y figuras clave que moldearon la soberanía mexicana durante las jornadas de septiembre.</p> <!-- Descripción del proyecto -->
         <!-- Etiquetas decorativas de clasificación -->
-        <span class="pill-badge-rojo">Compendio Histórico</span>
-        <span class="pill-badge-verde">Edición Especial</span>
-    </div>
+        <span class="pill-badge-rojo">Compendio Histórico</span> <!-- Etiqueta roja -->
+        <span class="pill-badge-verde">Edición Especial</span> <!-- Etiqueta verde -->
+    </div> <!-- Cierra la tarjeta hero -->
 
     <!-- Bloque de contenido secundario -->
-    <div class="section-block">
-        <div class="section-header">
-            <h2>Bienvenido al Compendio Digital</h2>
-            <span class="tagline">Navegación General</span>
-        </div>
-        <p>Selecciona cualquiera de las secciones en el menú superior para explorar el contenido detallado:</p>
+    <div class="section-block"> <!-- Abre la sección de información general -->
+        <div class="section-header"> <!-- Cabecera con borde inferior -->
+            <h2>Bienvenido al Compendio Digital</h2> <!-- Título h2 de la sección -->
+            <span class="tagline">Navegación General</span> <!-- Etiqueta flotante a la derecha -->
+        </div> <!-- Cierra la cabecera de sección -->
+        <p>Selecciona cualquiera de las secciones en el menú superior para explorar el contenido detallado:</p> <!-- Texto de instrucción -->
         
         <!-- Lista de opciones de navegación descritas -->
-        <ul>
-            <li><strong>Efemérides:</strong> Consulta la línea del tiempo con los hitos fundamentales de la gesta de independencia y soberanía.</li>
-            <li><strong>Biografías:</strong> Conoce la trayectoria de los forjadores de la libertad e ilustres personajes de la patria.</li>
-            <li><strong>Análisis:</strong> Descubre la revisión de mitos, realidades y tradiciones de nuestra cultura histórica.</li>
-        </ul>
-    </div>
+        <ul> <!-- Abre una lista no ordenada -->
+            <li><strong>Efemérides:</strong> Consulta la línea del tiempo con los hitos fundamentales de la gesta de independencia y soberanía.</li> <!-- Primer elemento de la lista -->
+            <li><strong>Biografías:</strong> Conoce la trayectoria de los forjadores de la libertad e ilustres personajes de la patria.</li> <!-- Segundo elemento de la lista -->
+            <li><strong>Análisis:</strong> Descubre la revisión de mitos, realidades y tradiciones de nuestra cultura histórica.</li> <!-- Tercer elemento de la lista -->
+        </ul> <!-- Cierra la lista no ordenada -->
+    </div> <!-- Cierra el bloque de la sección -->
 
     <!-- Pie de página -->
-    <div class="footer-editorial">
-        <p>ERIK MARTINEZ MONTES 5-J 0869</p>
-        <div class="top-accent-bar"></div>
-    </div>
-</body>
-</html>
+    <div class="footer-editorial"> <!-- Abre el contenedor del pie de página -->
+        <p>ERIK MARTINEZ MONTES 5-J 0869</p> <!-- Muestra la información del alumno/autor -->
+        <div class="top-accent-bar"></div> <!-- Vuelve a insertar la barra tricolor al pie -->
+    </div> <!-- Cierra el pie de página -->
+</body> <!-- Cierra el cuerpo del documento HTML -->
+</html> <!-- Cierra la etiqueta principal y final del archivo HTML -->
