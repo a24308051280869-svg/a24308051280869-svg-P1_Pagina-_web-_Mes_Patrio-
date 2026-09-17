@@ -1,0 +1,188 @@
+@page { /* Configuración de hoja para impresión */
+    size: A4; /* Define el tamaño de página A4 */
+    margin: 12mm; /* Fija un margen uniforme de 12 mm */
+    background-color: #fcfbf9; /* Aplica fondo color hueso suave */
+} /* Cierra la regla @page */
+
+*, *::before, *::after { /* Selecciona todos los elementos y pseudoelementos */
+    box-sizing: border-box; /* Incluye bordes y relleno en el ancho total */
+} /* Cierra el reseteo del modelo de caja */
+
+body { /* Reglas globales del cuerpo */
+    margin: 0; /* Remueve el margen por defecto */
+    padding: 0; /* Remueve el relleno por defecto */
+    font-family: 'Trebuchet MS', Arial, sans-serif; /* Define la tipografía base */
+    color: #2b2b2b; /* Establece color de texto en gris oscuro */
+    font-size: 9.5pt; /* Define el tamaño general de fuente */
+    line-height: 1.5; /* Establece la altura de línea */
+} /* Cierra los estilos de body */
+
+.top-accent-bar { /* Barra tricolor de acento */
+    height: 8px; /* Define altura de 8 píxeles */
+    width: 100%; /* Ocupa el 100% del ancho */
+    background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%); /* Fondo tricolor patrio */
+    border-bottom: 1px solid #d0d0d0; /* Añade borde inferior tenue */
+} /* Cierra la barra tricolor */
+
+.header-container { /* Contenedor de la cabecera */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde gris suave */
+    border-left: 5px solid #006847; /* Marco izquierdo verde */
+    border-right: 5px solid #ce1126; /* Marco derecho rojo */
+    padding: 16px 20px; /* Relleno interior */
+    margin-bottom: 16px; /* Espaciado inferior */
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+} /* Cierra el contenedor de cabecera */
+
+.header-table { /* Tabla estructural del encabezado */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Elimina separación entre celdas */
+} /* Cierra la tabla del encabezado */
+
+.brand-title { /* Título principal del sitio */
+    font-family: 'Georgia', serif; /* Fuente con serif clásica */
+    font-size: 16pt; /* Tamaño de texto destacado */
+    font-weight: bold; /* Aplica formato negrita */
+    color: #006847; /* Texto color verde patrio */
+    letter-spacing: 0.5px; /* Espaciado ligero entre letras */
+} /* Cierra el título del sitio */
+
+.brand-title a { /* Enlace dentro del título */
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del padre */
+} /* Cierra el enlace del título */
+
+.brand-title span { /* Resaltado de palabra en el título */
+    color: #ce1126; /* Texto color rojo patrio */
+} /* Cierra el span del título */
+
+.brand-subtitle { /* Subtítulo debajo del logo */
+    font-size: 8pt; /* Tamaño de fuente reducido */
+    color: #ce1126; /* Texto color rojo */
+    font-weight: bold; /* Aplica negrita */
+    text-transform: uppercase; /* Fuerza el texto a mayúsculas */
+    letter-spacing: 1.2px; /* Separación entre caracteres */
+    margin-top: 2px; /* Margen superior ligero */
+} /* Cierra el subtítulo */
+
+.header-nav { /* Contenedor de la barra de navegación */
+    text-align: right; /* Alinea los botones a la derecha */
+    font-size: 8pt; /* Tamaño de fuente */
+    font-weight: bold; /* Aplica negrita */
+    text-transform: uppercase; /* Fuerza texto en mayúsculas */
+    letter-spacing: 0.8px; /* Espaciado entre caracteres */
+} /* Cierra la barra de navegación */
+
+.header-nav a { /* Enlaces individuales del menú */
+    margin-left: 6px; /* Margen a la izquierda */
+    padding: 6px 12px; /* Relleno interno vertical y horizontal */
+    border-radius: 4px; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado */
+    display: inline-block; /* Formato de bloque alineado */
+    cursor: pointer; /* Icono de cursor al pasar encima */
+    transition: opacity 0.2s; /* Transición suave de opacidad */
+} /* Cierra los enlaces del menú */
+
+.header-nav a:hover { /* Efecto al pasar el mouse sobre el enlace */
+    opacity: 0.85; /* Reduce levemente la opacidad */
+} /* Cierra el estado hover */
+
+.nav-inicio { background-color: #2b2b2b; color: #ffffff !important; } /* Botón Inicio oscuro */
+.nav-verde { background-color: #006847; color: #ffffff !important; } /* Botón verde */
+.nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; } /* Botón blanco activo */
+.nav-rojo { background-color: #ce1126; color: #ffffff !important; } /* Botón rojo */
+
+.hero-card { /* Tarjeta principal destacada */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde general fino */
+    border-left: 6px solid #006847; /* Borde izquierdo verde grueso */
+    border-right: 6px solid #ce1126; /* Borde derecho rojo grueso */
+    padding: 22px 24px; /* Relleno interior */
+    margin-bottom: 20px; /* Margen inferior */
+    border-radius: 4px; /* Esquinas redondeadas */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.03); /* Sombra suave inferior */
+} /* Cierra la tarjeta destacada */
+
+.hero-card h1 { /* Título h1 de la tarjeta hero */
+    font-family: 'Georgia', serif; /* Tipografía estilo periódico */
+    font-size: 19pt; /* Tamaño grande */
+    color: #006847; /* Texto color verde */
+    margin: 0 0 8px 0; /* Margen inferior */
+    line-height: 1.2; /* Interlineado denso */
+} /* Cierra el h1 de la tarjeta */
+
+.hero-card p { /* Párrafo dentro de la tarjeta hero */
+    font-size: 9.5pt; /* Tamaño de fuente */
+    color: #4a504d; /* Texto gris verdoso */
+    margin: 0 0 14px 0; /* Margen inferior */
+    line-height: 1.5; /* Interlineado */
+} /* Cierra el párrafo de la tarjeta */
+
+.pill-badge-rojo { /* Etiqueta redondeada roja */
+    display: inline-block; /* Comportamiento en línea */
+    background-color: #ce1126; /* Fondo rojo */
+    color: #ffffff; /* Texto blanco */
+    padding: 5px 14px; /* Relleno interno */
+    border-radius: 15px; /* Redondeo tipo píldora */
+    font-size: 8pt; /* Tamaño de fuente pequeño */
+    font-weight: bold; /* Aplica negrita */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Mayúsculas */
+} /* Cierra la etiqueta roja */
+
+.pill-badge-verde { /* Etiqueta redondeada verde */
+    display: inline-block; /* Comportamiento en línea */
+    background-color: #006847; /* Fondo verde */
+    color: #ffffff; /* Texto blanco */
+    padding: 5px 14px; /* Relleno interno */
+    border-radius: 15px; /* Redondeo tipo píldora */
+    font-size: 8pt; /* Tamaño de fuente pequeño */
+    font-weight: bold; /* Aplica negrita */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Mayúsculas */
+    margin-left: 6px; /* Separación respecto a la etiqueta anterior */
+} /* Cierra la etiqueta verde */
+
+.section-block { /* Bloque contenedor de sección */
+    margin-bottom: 22px; /* Margen inferior */
+} /* Cierra el bloque de sección */
+
+.section-header { /* Encabezado con línea divisoria */
+    border-bottom: 2px solid #006847; /* Línea inferior verde */
+    padding-bottom: 4px; /* Relleno sobre la línea */
+    margin-bottom: 14px; /* Distancia con el contenido */
+} /* Cierra el encabezado de sección */
+
+.section-header h2 { /* Título h2 dentro del encabezado */
+    font-family: 'Georgia', serif; /* Fuente serif */
+    font-size: 14pt; /* Tamaño de fuente */
+    color: #006847; /* Texto color verde */
+    margin: 0; /* Sin márgenes */
+    display: inline-block; /* Permite alineación en línea */
+} /* Cierra el h2 de sección */
+
+.section-header .tagline { /* Etiqueta flotante a la derecha */
+    font-size: 8.5pt; /* Tamaño de fuente */
+    color: #ce1126; /* Texto color rojo */
+    font-weight: bold; /* Aplica negrita */
+    text-transform: uppercase; /* Mayúsculas */
+    float: right; /* Flota hacia la derecha */
+    margin-top: 4px; /* Ajuste vertical superior */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+} /* Cierra la etiqueta flotante */
+
+.footer-editorial { /* Tarjeta del pie de página */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde gris fino */
+    border-top: 3px solid #006847; /* Borde superior verde */
+    padding: 12px 10px; /* Relleno interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Margen superior */
+} /* Cierra el pie de página */
+
+.footer-editorial p { /* Párrafo del pie de página */
+    margin: 0 0 8px 0; /* Margen inferior */
+    font-size: 8pt; /* Tamaño de fuente pequeño */
+    color: #666666; /* Texto color gris */
+    font-weight: bold; /* Aplica negrita */
+} /* Cierra el párrafo del pie */
