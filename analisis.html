@@ -1,105 +1,247 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Análisis - Crónicas de Septiembre</title>
-    <style>
-        @page { size: A4; margin: 12mm 12mm; background-color: #fcfbf9; }
-        *, *::before, *::after { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: 'Trebuchet MS', Arial, sans-serif; color: #2b2b2b; font-size: 9.5pt; line-height: 1.5; }
-        .top-accent-bar { height: 8px; width: 100%; background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%); border-bottom: 1px solid #d0d0d0; }
-        .header-container { background-color: #ffffff; border: 1px solid #e0e0e0; border-left: 5px solid #006847; border-right: 5px solid #ce1126; padding: 16px 20px; margin-bottom: 16px; border-radius: 4px; }
-        .header-table { width: 100%; border-collapse: collapse; }
-        .brand-title { font-family: 'Georgia', serif; font-size: 16pt; font-weight: bold; color: #006847; letter-spacing: 0.5px; }
-        .brand-title a { text-decoration: none; color: inherit; }
-        .brand-title span { color: #ce1126; }
-        .brand-subtitle { font-size: 8pt; color: #ce1126; font-weight: bold; text-transform: uppercase; letter-spacing: 1.2px; margin-top: 2px; }
-        .header-nav { text-align: right; font-size: 8pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.8px; }
-        .header-nav a { margin-left: 6px; padding: 6px 12px; border-radius: 4px; text-decoration: none; display: inline-block; cursor: pointer; transition: opacity 0.2s; }
-        .header-nav a:hover { opacity: 0.85; }
-        .nav-inicio { background-color: #2b2b2b; color: #ffffff !important; }
-        .nav-verde { background-color: #006847; color: #ffffff !important; }
-        .nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; }
-        .nav-rojo { background-color: #ce1126; color: #ffffff !important; }
-        .section-block { margin-bottom: 22px; }
-        .section-header { border-bottom: 2px solid #006847; padding-bottom: 4px; margin-bottom: 14px; }
-        .section-header h2 { font-family: 'Georgia', serif; font-size: 14pt; color: #006847; margin: 0; display: inline-block; }
-        .section-header .tagline { font-size: 8.5pt; color: #ce1126; font-weight: bold; text-transform: uppercase; float: right; margin-top: 4px; letter-spacing: 0.5px; }
-        .mito-realidad-card { background-color: #ffffff; border: 1px solid #e0e0e0; border-left: 5px solid #ce1126; border-radius: 4px; margin-bottom: 10px; padding: 10px 14px; }
-        .badge-tipo { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 7pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 6px; }
-        .badge-desmentido { background-color: #ce1126; color: #ffffff; }
-        .badge-historico { background-color: #006847; color: #ffffff; }
-        .card-heading { font-size: 9.5pt; font-weight: bold; color: #006847; margin-bottom: 4px; }
-        .card-body-text { font-size: 8.5pt; color: #4f5552; line-height: 1.4; border-top: 1px dotted #d0d0d0; padding-top: 4px; margin-top: 4px; }
-        .footer-editorial { background-color: #ffffff; border: 1px solid #e0e0e0; border-top: 3px solid #006847; padding: 12px 10px; text-align: center; margin-top: 20px; }
-        .footer-editorial p { margin: 0 0 8px 0; font-size: 8pt; color: #666666; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <div class="top-accent-bar"></div>
-    <div class="header-container">
-        <table class="header-table">
-            <tr>
-                <td>
-                    <div class="brand-title"><a href="index.html">Crónicas de <span>Septiembre</span></a></div>
-                    <div class="brand-subtitle">Boletín Histórico e Identidad Nacional</div>
-                </td>
-                <td class="header-nav">
-                    <a href="index.html" class="nav-inicio">Inicio</a>
-                    <a href="efemerides.html" class="nav-verde">Efemérides</a>
-                    <a href="biografias.html" class="nav-blanco">Biografías</a>
-                    <a href="analisis.html" class="nav-rojo">Análisis</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 estándar -->
+<html lang="es"> <!-- Inicia el documento HTML especificando que el idioma principal es español -->
+<head> <!-- Contiene los metadatos y configuraciones del documento no visibles en el cuerpo -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres en UTF-8 para admitir acentos y eñes -->
+    <title>Análisis - Crónicas de Septiembre</title> <!-- Establece el título de la pestaña del navegador -->
+    <style> <!-- Abre el bloque para la definición de hojas de estilo CSS internas -->
+        @page { /* Configura las propiedades de impresión de la página */
+            size: A4; /* Define el tamaño de hoja A4 para impresión o exportación */
+            margin: 12mm 12mm; /* Asigna márgenes de 12 milímetros en todos los bordes */
+            background-color: #fcfbf9; /* Establece un color de fondo hueso claro para la hoja */
+        } /* Cierra la regla de configuración de página */
+        *, *::before, *::after { /* Selecciona todos los elementos y sus pseudoelementos */
+            box-sizing: border-box; /* Incluye el padding y bordes dentro del tamaño total de cada elemento */
+        } /* Cierra la regla del modelo de caja */
+        body { /* Aplica estilos al cuerpo general del documento */
+            margin: 0; /* Elimina los márgenes externos por defecto del navegador */
+            padding: 0; /* Elimina los rellenos internos por defecto del navegador */
+            font-family: 'Trebuchet MS', Arial, sans-serif; /* Define la familia tipográfica base */
+            color: #2b2b2b; /* Establece el color de texto en gris oscuro */
+            font-size: 9.5pt; /* Fija el tamaño general de la fuente a 9.5 puntos */
+            line-height: 1.5; /* Establece un interlineado de 1.5 para mejorar la lectura */
+        } /* Cierra los estilos del cuerpo */
+        .top-accent-bar { /* Define el estilo para la barra decorativa superior */
+            height: 8px; /* Fija el alto de la barra en 8 píxeles */
+            width: 100%; /* Extiende la barra a todo el ancho del contenedor */
+            background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%); /* Crea un degradado con los tres colores patrios */
+            border-bottom: 1px solid #d0d0d0; /* Añade una línea divisoria inferior de color gris */
+        } /* Cierra la clase de la barra decorativa */
+        .header-container { /* Define el contenedor principal del encabezado */
+            background-color: #ffffff; /* Fija el fondo del encabezado en color blanco */
+            border: 1px solid #e0e0e0; /* Aplica un borde fino gris alrededor del contenedor */
+            border-left: 5px solid #006847; /* Agrega un borde lateral izquierdo verde */
+            border-right: 5px solid #ce1126; /* Agrega un borde lateral derecho rojo */
+            padding: 16px 20px; /* Define el relleno interno superior e inferior de 16px y laterales de 20px */
+            margin-bottom: 16px; /* Deja un espacio inferior de 16 píxeles con el siguiente bloque */
+            border-radius: 4px; /* Redondea las esquinas del contenedor en 4 píxeles */
+        } /* Cierra la clase del contenedor del encabezado */
+        .header-table { /* Establece estilos para la tabla que organiza el encabezado */
+            width: 100%; /* Hace que la tabla ocupe todo el ancho disponible */
+            border-collapse: collapse; /* Elimina las separaciones entre celdas adyacentes */
+        } /* Cierra la clase de la tabla del encabezado */
+        .brand-title { /* Define el estilo para el título principal de la marca */
+            font-family: 'Georgia', serif; /* Cambia a tipografía serif de estilo formal */
+            font-size: 16pt; /* Fija el tamaño del título en 16 puntos */
+            font-weight: bold; /* Aplica estilo de texto en negrita */
+            color: #006847; /* Asigna el color verde patrio al texto */
+            letter-spacing: 0.5px; /* Define un espacio de 0.5 píxeles entre letras */
+        } /* Cierra la clase del título de marca */
+        .brand-title a { /* Define los estilos para el enlace del título */
+            text-decoration: none; /* Remueve el subrayado predeterminado de los enlaces */
+            color: inherit; /* Hereda el color verde definido en el contenedor padre */
+        } /* Cierra la regla del enlace del título */
+        .brand-title span { /* Estiliza una palabra clave dentro del título */
+            color: #ce1126; /* Cambia el color del texto seleccionado a rojo patrio */
+        } /* Cierra la regla del span dentro del título */
+        .brand-subtitle { /* Define el estilo del subtítulo de la marca */
+            font-size: 8pt; /* Fija el tamaño de fuente en 8 puntos */
+            color: #ce1126; /* Asigna el color rojo patrio al texto */
+            font-weight: bold; /* Aplica negrita al texto */
+            text-transform: uppercase; /* Convierte todo el texto en mayúsculas */
+            letter-spacing: 1.2px; /* Amplía el espaciado entre letras a 1.2 píxeles */
+            margin-top: 2px; /* Otorga un margen superior de 2 píxeles */
+        } /* Cierra la clase del subtítulo */
+        .header-nav { /* Modifica la celda que contiene el menú de navegación */
+            text-align: right; /* Alinea el menú a la derecha */
+            font-size: 8pt; /* Fija el tamaño de fuente del menú en 8 puntos */
+            font-weight: bold; /* Aplica negrita a las opciones del menú */
+            text-transform: uppercase; /* Fuerza el texto del menú a mayúsculas */
+            letter-spacing: 0.8px; /* Establece espaciado entre caracteres de 0.8 píxeles */
+        } /* Cierra los estilos de la celda de navegación */
+        .header-nav a { /* Aplica formato individual a cada botón de enlace del menú */
+            margin-left: 6px; /* Deja una separación de 6 píxeles a la izquierda de cada botón */
+            padding: 6px 12px; /* Agrega un relleno interno de 6px arriba/abajo y 12px a los lados */
+            border-radius: 4px; /* Redondea los bordes del botón en 4 píxeles */
+            text-decoration: none; /* Quita el subrayado del enlace */
+            display: inline-block; /* Permite aplicar dimensiones y márgenes manteniendo el flujo en línea */
+            cursor: pointer; /* Cambia el puntero a una mano al pasar por encima */
+            transition: opacity 0.2s; /* Define una transición suave para la opacidad de 0.2 segundos */
+        } /* Cierra los estilos básicos del enlace de navegación */
+        .header-nav a:hover { /* Cambia el comportamiento al pasar el mouse por los enlaces */
+            opacity: 0.85; /* Reduce la opacidad al 85% para indicar interacción */
+        } /* Cierra el efecto hover de la navegación */
+        .nav-inicio { /* Estilo específico para el botón "Inicio" */
+            background-color: #2b2b2b; /* Color de fondo gris oscuro */
+            color: #ffffff !important; /* Texto en blanco forzado */
+        } /* Cierra el estilo de inicio */
+        .nav-verde { /* Estilo específico para el botón verde */
+            background-color: #006847; /* Fondo de color verde patrio */
+            color: #ffffff !important; /* Texto en blanco forzado */
+        } /* Cierra el estilo verde */
+        .nav-blanco { /* Estilo específico para el botón blanco */
+            background-color: #ffffff; /* Fondo de color blanco */
+            color: #2b2b2b !important; /* Texto gris oscuro forzado */
+            border: 1px solid #cccccc; /* Borde gris claro decorativo */
+        } /* Cierra el estilo blanco */
+        .nav-rojo { /* Estilo específico para el botón rojo */
+            background-color: #ce1126; /* Fondo de color rojo patrio */
+            color: #ffffff !important; /* Texto en blanco forzado */
+        } /* Cierra el estilo rojo */
+        .section-block { /* Define el contenedor de las secciones de contenido */
+            margin-bottom: 22px; /* Espaciado inferior de 22 píxeles con el siguiente módulo */
+        } /* Cierra la clase del bloque de sección */
+        .section-header { /* Define el encabezado interno de cada sección */
+            border-bottom: 2px solid #006847; /* Borde inferior de 2 píxeles de color verde */
+            padding-bottom: 4px; /* Relleno inferior de 4 píxeles sobre la línea verde */
+            margin-bottom: 14px; /* Espaciado de 14 píxeles antes de las tarjetas */
+        } /* Cierra el encabezado de sección */
+        .section-header h2 { /* Estiliza el título h2 dentro del encabezado */
+            font-family: 'Georgia', serif; /* Tipografía Georgia con remates serif */
+            font-size: 14pt; /* Tamaño de fuente en 14 puntos */
+            color: #006847; /* Texto de color verde patrio */
+            margin: 0; /* Elimina márgenes por defecto del h2 */
+            display: inline-block; /* Mantiene el elemento en línea para convivir con la etiqueta lateral */
+        } /* Cierra los estilos del título h2 */
+        .section-header .tagline { /* Estiliza el subtítulo o etiqueta alineada a la derecha */
+            font-size: 8.5pt; /* Tamaño de fuente en 8.5 puntos */
+            color: #ce1126; /* Texto de color rojo patrio */
+            font-weight: bold; /* Aplica texto en negrita */
+            text-transform: uppercase; /* Pone las letras en mayúsculas */
+            float: right; /* Alinea el elemento flotando hacia la derecha */
+            margin-top: 4px; /* Empuja el elemento 4 píxeles hacia abajo */
+            letter-spacing: 0.5px; /* Espaciado entre letras de 0.5 píxeles */
+        } /* Cierra los estilos de la etiqueta secundaria */
+        .mito-realidad-card { /* Estiliza cada tarjeta contenedora de un mito o hecho */
+            background-color: #ffffff; /* Fondo blanco para resaltar sobre el tono general */
+            border: 1px solid #e0e0e0; /* Borde gris tenue para definir el recuadro */
+            border-left: 5px solid #ce1126; /* Franja lateral izquierda de color rojo */
+            border-radius: 4px; /* Esquinas ligeramente redondeadas a 4 píxeles */
+            margin-bottom: 10px; /* Margen inferior de 10 píxeles entre tarjetas */
+            padding: 10px 14px; /* Relleno interno vertical de 10px e horizontal de 14px */
+        } /* Cierra los estilos de la tarjeta mito/realidad */
+        .badge-tipo { /* Estiliza las pequeñas etiquetas distintivas */
+            display: inline-block; /* Permite dar ancho, alto y margen al contenedor */
+            padding: 2px 8px; /* Relleno de 2px vertical y 8px horizontal */
+            border-radius: 3px; /* Redondea los bordes a 3 píxeles */
+            font-size: 7pt; /* Tamaño de fuente reducido a 7 puntos */
+            font-weight: bold; /* Texto en negrita para resaltar */
+            text-transform: uppercase; /* Pone el texto de la etiqueta en mayúsculas */
+            letter-spacing: 0.5px; /* Espacio de 0.5 píxeles entre letras */
+            margin-right: 6px; /* Separación a la derecha con respecto al título */
+        } /* Cierra los estilos generales de la etiqueta distintiva */
+        .badge-desmentido { /* Estilo específico para la etiqueta de mitos desmontados */
+            background-color: #ce1126; /* Fondo rojo patrio */
+            color: #ffffff; /* Texto en blanco */
+        } /* Cierra la variante de etiqueta desmentido */
+        .badge-historico { /* Estilo específico para la etiqueta de origen o historia */
+            background-color: #006847; /* Fondo verde patrio */
+            color: #ffffff; /* Texto en blanco */
+        } /* Cierra la variante de etiqueta histórica */
+        .card-heading { /* Estiliza el título o cabecera superior de la tarjeta */
+            font-size: 9.5pt; /* Tamaño de fuente fijado en 9.5 puntos */
+            font-weight: bold; /* Texto en negrita */
+            color: #006847; /* Texto de color verde patrio */
+            margin-bottom: 4px; /* Margen inferior de 4 píxeles */
+        } /* Cierra los estilos del título de la tarjeta */
+        .card-body-text { /* Estiliza el texto descriptivo interior de la tarjeta */
+            font-size: 8.5pt; /* Tamaño de fuente en 8.5 puntos */
+            color: #4f5552; /* Texto en tono gris verdoso oscuro */
+            line-height: 1.4; /* Interlineado ajustado a 1.4 */
+            border-top: 1px dotted #d0d0d0; /* Línea superior de puntos de color gris */
+            padding-top: 4px; /* Relleno superior de 4 píxeles tras la línea */
+            margin-top: 4px; /* Espacio superior de 4 píxeles */
+        } /* Cierra el estilo del texto de la tarjeta */
+        .footer-editorial { /* Estiliza el contenedor del pie de página */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Borde suave alrededor de todo el pie */
+            border-top: 3px solid #006847; /* Borde superior más grueso de color verde */
+            padding: 12px 10px; /* Relleno interno de 12px vertical y 10px horizontal */
+            text-align: center; /* Centra el contenido horizontalmente */
+            margin-top: 20px; /* Margen superior de 20 píxeles */
+        } /* Cierra los estilos del pie de página */
+        .footer-editorial p { /* Estiliza el texto dentro del pie de página */
+            margin: 0 0 8px 0; /* Margen inferior de 8 píxeles */
+            font-size: 8pt; /* Fuente en 8 puntos */
+            color: #666666; /* Texto en gris medio */
+            font-weight: bold; /* Texto en negrita */
+        } /* Cierra los estilos del párrafo del pie de página */
+    </style> <!-- Cierra el bloque de estilos CSS -->
+</head> <!-- Cierra la sección del encabezado técnico (head) -->
+<body> <!-- Abre el cuerpo del documento con el contenido visible -->
+    <div class="top-accent-bar"></div> <!-- Inserta la barra superior tricolor decorativa -->
+    <div class="header-container"> <!-- Inicia el contenedor principal del encabezado -->
+        <table class="header-table"> <!-- Inicia la tabla para organizar el título y el menú -->
+            <tr> <!-- Inicia la fila única de la tabla -->
+                <td> <!-- Abre la celda izquierda para los títulos de la marca -->
+                    <div class="brand-title"><a href="index.html">Crónicas de <span>Septiembre</span></a></div> <!-- Título del portal con enlace e hipervínculo -->
+                    <div class="brand-subtitle">Boletín Histórico e Identidad Nacional</div> <!-- Subtítulo explicativo del boletín -->
+                </td> <!-- Cierra la celda de la marca -->
+                <td class="header-nav"> <!-- Abre la celda derecha para el menú de navegación -->
+                    <a href="index.html" class="nav-inicio">Inicio</a> <!-- Botón hacia la página de inicio -->
+                    <a href="efemerides.html" class="nav-verde">Efemérides</a> <!-- Botón hacia la página de efemérides -->
+                    <a href="biografias.html" class="nav-blanco">Biografías</a> <!-- Botón hacia la página de biografías -->
+                    <a href="analisis.html" class="nav-rojo">Análisis</a> <!-- Botón hacia la página actual de análisis -->
+                </td> <!-- Cierra la celda de la navegación -->
+            </tr> <!-- Cierra la fila de la tabla -->
+        </table> <!-- Cierra la tabla del encabezado -->
+    </div> <!-- Cierra el contenedor del encabezado -->
 
-    <div class="section-block">
-        <div class="section-header">
-            <h2>Realidades, Mitos y Tradiciones</h2>
-            <span class="tagline">Análisis Histórico</span>
-        </div>
+    <div class="section-block"> <!-- Inicia el módulo de contenido de análisis -->
+        <div class="section-header"> <!-- Abre la cabecera del bloque -->
+            <h2>Realidades, Mitos y Tradiciones</h2> <!-- Título de la sección -->
+            <span class="tagline">Análisis Histórico</span> <!-- Etiqueta secundaria en la esquina superior derecha -->
+        </div> <!-- Cierra la cabecera del bloque -->
 
-        <div class="mito-realidad-card">
-            <div class="card-heading">
-                <span class="badge-tipo badge-desmentido">Mito Desmontado</span> ¿Ejecutó Hidalgo el repique directo de la campana?
-            </div>
-            <div class="card-body-text">
-                <strong>Evidencia Histórica:</strong> La convocatoria sonora de aquella madrugada fue realizada por el campanero oficial del templo, José Galván, mientras Hidalgo coordinaba al contingente en el atrio parroquial.
-            </div>
-        </div>
+        <div class="mito-realidad-card"> <!-- Abre la primera tarjeta de análisis -->
+            <div class="card-heading"> <!-- Abre la cabecera de la tarjeta -->
+                <span class="badge-tipo badge-desmentido">Mito Desmontado</span> ¿Ejecutó Hidalgo el repique directo de la campana? <!-- Etiqueta roja con el título de la consulta -->
+            </div> <!-- Cierra la cabecera de la tarjeta -->
+            <div class="card-body-text"> <!-- Abre el cuerpo con la explicación del hecho -->
+                <strong>Evidencia Histórica:</strong> La convocatoria sonora de aquella madrugada fue realizada por el campanero oficial del templo, José Galván, mientras Hidalgo coordinaba al contingente en el atrio parroquial. <!-- Texto detallado sobre la evidencia histórica -->
+            </div> <!-- Cierra el cuerpo de la tarjeta -->
+        </div> <!-- Cierra la primera tarjeta de análisis -->
 
-        <div class="mito-realidad-card">
-            <div class="card-heading">
-                <span class="badge-tipo badge-historico">Origen Cultural</span> El horario de la conmemoración popular
-            </div>
-            <div class="card-body-text">
-                La costumbre de festejar la noche del 15 de septiembre responde a una tradición social instaurada desde la década de 1840 para facilitar el esparcimiento familiar, desmintiendo la creencia de que fue fijada arbitrariamente por el presidente Porfirio Díaz.
-            </div>
-        </div>
+        <div class="mito-realidad-card"> <!-- Abre la segunda tarjeta de análisis -->
+            <div class="card-heading"> <!-- Abre la cabecera de la tarjeta -->
+                <span class="badge-tipo badge-historico">Origen Cultural</span> El horario de la conmemoración popular <!-- Etiqueta verde con el título del tema -->
+            </div> <!-- Cierra la cabecera de la tarjeta -->
+            <div class="card-body-text"> <!-- Abre el cuerpo descriptivo -->
+                La costumbre de festejar la noche del 15 de septiembre responde a una tradición social instaurada desde la década de 1840 para facilitar el esparcimiento familiar, desmintiendo la creencia de que fue fijada arbitrariamente por el presidente Porfirio Díaz. <!-- Explicación sobre el horario del festejo -->
+            </div> <!-- Cierra el cuerpo de la tarjeta -->
+        </div> <!-- Cierra la segunda tarjeta de análisis -->
 
-        <div class="mito-realidad-card">
-            <div class="card-heading">
-                <span class="badge-tipo badge-desmentido">Mito Desmontado</span> La iconografía oficial del Cura Hidalgo
-            </div>
-            <div class="card-body-text">
-                <strong>Evidencia Histórica:</strong> No existen retratos pictóricos creados en vida de Don Miguel Hidalgo. El retrato institucional más extendido fue comisionado por el emperador Maximiliano décadas más tarde, tomando como referencia a un clérigo belga.
-            </div>
-        </div>
+        <div class="mito-realidad-card"> <!-- Abre la tercera tarjeta de análisis -->
+            <div class="card-heading"> <!-- Abre la cabecera de la tarjeta -->
+                <span class="badge-tipo badge-desmentido">Mito Desmontado</span> La iconografía oficial del Cura Hidalgo <!-- Etiqueta roja con el título sobre el retrato -->
+            </div> <!-- Cierra la cabecera de la tarjeta -->
+            <div class="card-body-text"> <!-- Abre el cuerpo con la evidencia histórica -->
+                <strong>Evidencia Histórica:</strong> No existen retratos pictóricos creados en vida de Don Miguel Hidalgo. El retrato institucional más extendido fue comisionado por el emperador Maximiliano décadas más tarde, tomando como referencia a un clérigo belga. <!-- Explicación sobre la iconografía -->
+            </div> <!-- Cierra el cuerpo de la tarjeta -->
+        </div> <!-- Cierra la tercera tarjeta de análisis -->
 
-        <div class="mito-realidad-card">
-            <div class="card-heading">
-                <span class="badge-tipo badge-historico">Patrimonio Gastronómico</span> La simbología de los Chiles en Nogada
-            </div>
-            <div class="card-body-text">
-                Especialidad culinaria concebida por las religiosas del convento de Santa Mónica en Puebla para agasajar a Agustín de Iturbide, incorporando los tonos patrios de la bandera del Ejército Trigarante.
-            </div>
-        </div>
-    </div>
+        <div class="mito-realidad-card"> <!-- Abre la cuarta tarjeta de análisis -->
+            <div class="card-heading"> <!-- Abre la cabecera de la tarjeta -->
+                <span class="badge-tipo badge-historico">Patrimonio Gastronómico</span> La simbología de los Chiles en Nogada <!-- Etiqueta verde con el título gastronómico -->
+            </div> <!-- Cierra la cabecera de la tarjeta -->
+            <div class="card-body-text"> <!-- Abre el cuerpo descriptivo -->
+                Especialidad culinaria concebida por las religiosas del convento de Santa Mónica en Puebla para agasajar a Agustín de Iturbide, incorporando los tonos patrios de la bandera del Ejército Trigarante. <!-- Explicación sobre el origen del platillo -->
+            </div> <!-- Cierra el cuerpo de la tarjeta -->
+        </div> <!-- Cierra la cuarta tarjeta de análisis -->
+    </div> <!-- Cierra el bloque principal de contenido -->
 
-    <div class="footer-editorial">
-        <p>ERIK MARTINEZ MONTES 5-J 0869</p>
-        <div class="top-accent-bar"></div>
-    </div>
-</body>
-</html>
+    <div class="footer-editorial"> <!-- Inicia el bloque del pie de página -->
+        <p>ERIK MARTINEZ MONTES 5-J 0869</p> <!-- Muestra el nombre y datos del autor del proyecto -->
+        <div class="top-accent-bar"></div> <!-- Inserta una barra tricolor de adorno en la base del pie -->
+    </div> <!-- Cierra el contenedor del pie de página -->
+</body> <!-- Cierra el cuerpo del documento HTML -->
+</html> <!-- Cierra la etiqueta principal del documento HTML -->
