@@ -1,41 +1,198 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Especifica la versión de HTML que va a interpretar el navegador (HTML5) -->
+<html lang="es"> <!-- Define el idioma principal de la página como español -->
 <head>
-    <meta charset="UTF-8">
-    <title>Efemérides - Crónicas de Septiembre</title>
+    <meta charset="UTF-8"> <!-- Permite mostrar caracteres especiales, acentos y eñes sin problemas -->
+    <title>Efemérides - Crónicas de Septiembre</title> <!-- Título visible en la pestaña del navegador -->
+    
     <style>
-        @page { size: A4; margin: 12mm 12mm; background-color: #fcfbf9; }
-        *, *::before, *::after { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: 'Trebuchet MS', Arial, sans-serif; color: #2b2b2b; font-size: 9.5pt; line-height: 1.5; }
-        .top-accent-bar { height: 8px; width: 100%; background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%); border-bottom: 1px solid #d0d0d0; }
-        .header-container { background-color: #ffffff; border: 1px solid #e0e0e0; border-left: 5px solid #006847; border-right: 5px solid #ce1126; padding: 16px 20px; margin-bottom: 16px; border-radius: 4px; }
-        .header-table { width: 100%; border-collapse: collapse; }
-        .brand-title { font-family: 'Georgia', serif; font-size: 16pt; font-weight: bold; color: #006847; letter-spacing: 0.5px; }
-        .brand-title a { text-decoration: none; color: inherit; }
-        .brand-title span { color: #ce1126; }
-        .brand-subtitle { font-size: 8pt; color: #ce1126; font-weight: bold; text-transform: uppercase; letter-spacing: 1.2px; margin-top: 2px; }
-        .header-nav { text-align: right; font-size: 8pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.8px; }
-        .header-nav a { margin-left: 6px; padding: 6px 12px; border-radius: 4px; text-decoration: none; display: inline-block; cursor: pointer; transition: opacity 0.2s; }
-        .header-nav a:hover { opacity: 0.85; }
+        /* CONFIGURACIÓN PARA IMPRESIÓN Y TAMAÑO DE HOJA */
+        @page { 
+            size: A4; /* Ajusta la vista para formato de impresión en hoja A4 */
+            margin: 12mm 12mm; /* Define los márgenes de la hoja impresa */
+            background-color: #fcfbf9; /* Color de fondo hueso/crema suave */
+        }
+
+        /* REGLAS GLOBALES Y RESET BÁSICO */
+        *, *::before, *::after { 
+            box-sizing: border-box; /* Evita que los bordes y rellenos alteren el tamaño total de los elementos */
+        }
+
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Trebuchet MS', Arial, sans-serif; /* Tipografía limpia para la lectura */
+            color: #2b2b2b; /* Color del texto general en gris oscuro */
+            font-size: 9.5pt; /* Tamaño base de la tipografía */
+            line-height: 1.5; /* Espaciado entre renglones */
+        }
+
+        /* DISEÑO DE CABECERA Y BARRAS DE ACENTO */
+        .top-accent-bar { 
+            height: 8px; 
+            width: 100%; 
+            /* Genera una franja continua con los colores patrios (verde, blanco y rojo) */
+            background: linear-gradient(90deg, #006847 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce1126 66.6%); 
+            border-bottom: 1px solid #d0d0d0; 
+        }
+
+        .header-container { 
+            background-color: #ffffff; 
+            border: 1px solid #e0e0e0; 
+            border-left: 5px solid #006847; /* Marco verde a la izquierda */
+            border-right: 5px solid #ce1126; /* Marco rojo a la derecha */
+            padding: 16px 20px; 
+            margin-bottom: 16px; 
+            border-radius: 4px; 
+        }
+
+        .header-table { 
+            width: 100%; 
+            border-collapse: collapse; /* Elimina la separación entre celdas */
+        }
+
+        .brand-title { 
+            font-family: 'Georgia', serif; /* Tipo de letra clásica para estilo periódico */
+            font-size: 16pt; 
+            font-weight: bold; 
+            color: #006847; 
+            letter-spacing: 0.5px; 
+        }
+
+        .brand-title a { 
+            text-decoration: none; /* Le quita la línea inferior a los enlaces */
+            color: inherit; 
+        }
+
+        .brand-title span { 
+            color: #ce1126; /* Destaca la palabra "Septiembre" en rojo */
+        }
+
+        .brand-subtitle { 
+            font-size: 8pt; 
+            color: #ce1126; 
+            font-weight: bold; 
+            text-transform: uppercase; /* Pone las letras automáticamente en mayúsculas */
+            letter-spacing: 1.2px; 
+            margin-top: 2px; 
+        }
+
+        /* MENÚ Y BOTONES DE NAVEGACIÓN */
+        .header-nav { 
+            text-align: right; 
+            font-size: 8pt; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 0.8px; 
+        }
+
+        .header-nav a { 
+            margin-left: 6px; 
+            padding: 6px 12px; 
+            border-radius: 4px; 
+            text-decoration: none; 
+            display: inline-block; 
+            cursor: pointer; 
+            transition: opacity 0.2s; /* Transición suave al pasar el cursor */
+        }
+
+        .header-nav a:hover { 
+            opacity: 0.85; /* Cambia ligeramente la transparencia al pasar el mouse */
+        }
+
+        /* Estilos específicos según el botón activo o sección */
         .nav-inicio { background-color: #2b2b2b; color: #ffffff !important; }
         .nav-verde { background-color: #006847; color: #ffffff !important; }
         .nav-blanco { background-color: #ffffff; color: #2b2b2b !important; border: 1px solid #cccccc; }
         .nav-rojo { background-color: #ce1126; color: #ffffff !important; }
-        .section-block { margin-bottom: 22px; }
-        .section-header { border-bottom: 2px solid #006847; padding-bottom: 4px; margin-bottom: 14px; }
-        .section-header h2 { font-family: 'Georgia', serif; font-size: 14pt; color: #006847; margin: 0; display: inline-block; }
-        .section-header .tagline { font-size: 8.5pt; color: #ce1126; font-weight: bold; text-transform: uppercase; float: right; margin-top: 4px; letter-spacing: 0.5px; }
-        .cronologia-item { background-color: #ffffff; border: 1px solid #e0e0e0; border-left: 5px solid #006847; padding: 10px 14px; margin-bottom: 10px; border-radius: 3px; }
-        .cronologia-header-table { width: 100%; border-collapse: collapse; margin-bottom: 4px; }
-        .cronologia-fecha { font-family: 'Georgia', serif; font-size: 9.5pt; font-weight: bold; color: #ce1126; }
-        .cronologia-titulo { font-size: 10pt; font-weight: bold; color: #006847; }
-        .cronologia-item p { margin: 0; font-size: 8.5pt; color: #4f5552; line-height: 1.4; }
-        .footer-editorial { background-color: #ffffff; border: 1px solid #e0e0e0; border-top: 3px solid #006847; padding: 12px 10px; text-align: center; margin-top: 20px; }
-        .footer-editorial p { margin: 0 0 8px 0; font-size: 8pt; color: #666666; font-weight: bold; }
+
+        /* SECCIONES Y CONTENIDOS */
+        .section-block { 
+            margin-bottom: 22px; 
+        }
+
+        .section-header { 
+            border-bottom: 2px solid #006847; /* Línea divisoria verde bajo el título principal */
+            padding-bottom: 4px; 
+            margin-bottom: 14px; 
+        }
+
+        .section-header h2 { 
+            font-family: 'Georgia', serif; 
+            font-size: 14pt; 
+            color: #006847; 
+            margin: 0; 
+            display: inline-block; 
+        }
+
+        .section-header .tagline { 
+            font-size: 8.5pt; 
+            color: #ce1126; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            float: right; /* Mueve el texto de la etiqueta a la esquina superior derecha */
+            margin-top: 4px; 
+            letter-spacing: 0.5px; 
+        }
+
+        /* ESTILOS DE LA CRONOLOGÍA / EFEMÉRIDES */
+        .cronologia-item { 
+            background-color: #ffffff; 
+            border: 1px solid #e0e0e0; 
+            border-left: 5px solid #006847; /* Borde verde para cada tarjeta de evento */
+            padding: 10px 14px; 
+            margin-bottom: 10px; 
+            border-radius: 3px; 
+        }
+
+        .cronologia-header-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-bottom: 4px; 
+        }
+
+        .cronologia-fecha { 
+            font-family: 'Georgia', serif; 
+            font-size: 9.5pt; 
+            font-weight: bold; 
+            color: #ce1126; /* Color rojo para destacar la fecha */
+        }
+
+        .cronologia-titulo { 
+            font-size: 10pt; 
+            font-weight: bold; 
+            color: #006847; /* Color verde para el título del evento */
+        }
+
+        .cronologia-item p { 
+            margin: 0; 
+            font-size: 8.5pt; 
+            color: #4f5552; 
+            line-height: 1.4; 
+        }
+
+        /* PIE DE PÁGINA EDITORIAL */
+        .footer-editorial { 
+            background-color: #ffffff; 
+            border: 1px solid #e0e0e0; 
+            border-top: 3px solid #006847; 
+            padding: 12px 10px; 
+            text-align: center; 
+            margin-top: 20px; 
+        }
+
+        .footer-editorial p { 
+            margin: 0 0 8px 0; 
+            font-size: 8pt; 
+            color: #666666; 
+            font-weight: bold; 
+        }
     </style>
 </head>
 <body>
+    <!-- Barra decorativa de inicio -->
     <div class="top-accent-bar"></div>
+
+    <!-- Encabezado con título del sitio y enlaces del menú usando tabla para estructura -->
     <div class="header-container">
         <table class="header-table">
             <tr>
@@ -53,6 +210,7 @@
         </table>
     </div>
 
+    <!-- Bloque principal con el listado de eventos históricos -->
     <div class="section-block">
         <div class="section-header">
             <h2>Hitos Fundamentales de la Gesta</h2>
@@ -60,6 +218,8 @@
         </div>
 
         <div class="cronologia-list">
+            
+            <!-- Evento 1: Chapultepec -->
             <div class="cronologia-item">
                 <table class="cronologia-header-table">
                     <tr>
@@ -70,6 +230,7 @@
                 <p>Resistencia militar y simbólica de los estudiantes del Colegio Militar frente al avance de las tropas estadounidenses en el cerro del Saltamontes.</p>
             </div>
 
+            <!-- Evento 2: El Grito / Velada -->
             <div class="cronologia-item">
                 <table class="cronologia-header-table">
                     <tr>
@@ -80,6 +241,7 @@
                 <p>Conmemoración nocturna comunitaria donde la ciudadanía se congrega en los espacios públicos para reafirmar el compromiso con la soberanía nacional.</p>
             </div>
 
+            <!-- Evento 3: Inicio de la Independencia -->
             <div class="cronologia-item">
                 <table class="cronologia-header-table">
                     <tr>
@@ -90,6 +252,7 @@
                 <p>Inicio formal de la insurrección armada tras la alocución dominical impartida por Don Miguel Hidalgo en la parroquia de Guanajuato.</p>
             </div>
 
+            <!-- Evento 4: Consumación -->
             <div class="cronologia-item">
                 <table class="cronologia-header-table">
                     <tr>
@@ -100,6 +263,7 @@
                 <p>Culminación del proceso emancipador mediante la entrada triunfal del contingente insurgente-realista unificado a la capital del país.</p>
             </div>
 
+            <!-- Evento 5: Natalicio de Morelos -->
             <div class="cronologia-item">
                 <table class="cronologia-header-table">
                     <tr>
@@ -109,12 +273,15 @@
                 </table>
                 <p>Conmemoración del nacimiento del ideólogo del movimiento, responsable del primer ideario institucional escrito de la nación.</p>
             </div>
+
         </div>
     </div>
 
+    <!-- Pie de página con el nombre del alumno y la barra decorativa inferior -->
     <div class="footer-editorial">
         <p>ERIK MARTINEZ MONTES 5-J 0869</p>
         <div class="top-accent-bar"></div>
     </div>
 </body>
+</html>
 </html>
