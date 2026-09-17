@@ -171,7 +171,7 @@
             width: 48px; 
             height: 48px; 
             border-radius: 50%; /* Transforma el recuadro en un círculo perfecto */
-            overflow: hidden; /* Corta los bordes de la imagen para que encaje en el círculo */
+            overflow: hidden; /* Corta los bordes sobrantes de la imagen */
             margin: 0 auto 8px auto; /* Centra el círculo horizontalmente */
             border: 2px solid #ce1126; /* Anillo rojo alrededor de la foto */
             background-color: #f0f0f0; 
@@ -181,7 +181,7 @@
         .avatar-box img { 
             width: 100%; 
             height: 100%; 
-            object-fit: cover; /* Escala la foto para rellenar todo el círculo sin deformarse */
+            object-fit: cover; /* Recorta la imagen automáticamente para llenar el círculo sin deformarla */
             display: block; 
         }
 
@@ -264,7 +264,7 @@
                 <div class="personajes-cell">
                     <div class="personaje-card">
                         <div class="avatar-box">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Miguel_Hidalgo_y_Costilla_-_Jose_Iniestra.jpg/200px-Miguel_Hidalgo_y_Costilla_-_Jose_Iniestra.jpg" alt="Don Miguel Hidalgo">
+                            <img src="hidalgo.png" alt="Don Miguel Hidalgo">
                         </div>
                         <h3>Don Miguel Hidalgo</h3>
                         <div class="epiteto">El Iniciador</div>
@@ -276,7 +276,7 @@
                 <div class="personajes-cell">
                     <div class="personaje-card">
                         <div class="avatar-box">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Josefa_Ortiz_de_Dom%C3%ADnguez_retrato.jpg/200px-Josefa_Ortiz_de_Dom%C3%ADnguez_retrato.jpg" alt="Doña Josefa Ortiz">
+                            <img src="josefa.png" alt="Doña Josefa Ortiz">
                         </div>
                         <h3>Doña Josefa Ortiz</h3>
                         <div class="epiteto">La Estratega</div>
@@ -288,7 +288,7 @@
                 <div class="personajes-cell">
                     <div class="personaje-card">
                         <div class="avatar-box">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Jose_Maria_Morelos_y_Pavon.jpg/200px-Jose_Maria_Morelos_y_Pavon.jpg" alt="José María Morelos">
+                            <img src="morelos.png" alt="José María Morelos">
                         </div>
                         <h3>José María Morelos</h3>
                         <div class="epiteto">El Organizador</div>
@@ -300,7 +300,7 @@
                 <div class="personajes-cell">
                     <div class="personaje-card">
                         <div class="avatar-box">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vicente_Guerrero.jpg/200px-Vicente_Guerrero.jpg" alt="Vicente Guerrero">
+                            <img src="guerrero.png" alt="Vicente Guerrero">
                         </div>
                         <h3>Vicente Guerrero</h3>
                         <div class="epiteto">El Baluarte</div>
@@ -318,4 +318,5 @@
         <div class="top-accent-bar"></div>
     </div>
 </body>
+</html>
 </html>
